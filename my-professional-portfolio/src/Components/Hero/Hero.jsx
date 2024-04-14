@@ -42,12 +42,12 @@ const Hero = () => {
         return () => clearInterval(interval);
     }, [i]);
     return (
-        <div className="flex   justify-between mx-auto container items-center h-[800px] lg:h-[900px] ">
+        <div className="flex   justify-between mx-auto container items-center h-[750px] lg:h-[900px] ">
                 <div className="flex flex-col gap-5" data-aos="fade-right">
                     <div className="lg:border-l-8 lg:border-darknavy lg:pl-4 ">
                         <div className="flex flex-col lg:text-left text-center ">
                             <h1 className="lg:text-6xl text-4xl  font-bold tracking-wide" id="gradient-text">Sayem Ibne Taher</h1>
-                            <span className="mt-4 text- text-xl  text-gray-600">Front-End | UI & UX | iOS</span>
+                            <span className="mt-4  text-sm lg:text-xl  text-gray-600">Front-End | UI & UX | iOS</span>
                         </div>
 
                     </div>
@@ -60,49 +60,49 @@ const Hero = () => {
                     <div className="flex flex-col gap-5 mt-5 justify-center lg:items-start lg:justify-start items-center">
                         <p className="text-xl border-b-2 border-primaryBlue tracking-wide font-bold pb-2 w-[120px]">Expertise In</p>
                         <Fade damping={0.5} cascade>
-                            <div className="flex flex-row flex-wrap justify-center items-center lg:justify-start lg:items-start gap-5 text-2xl" id="wavy-animation">
+                            <div className="flex flex-row flex-wrap justify-center items-center lg:justify-start lg:items-start gap-5 text-xl lg:text-2xl" id="wavy-animation">
 
-                                <div className="bg-gray-100 rounded-full p-5 tooltip-bottom tooltip" data-tip="HTML5">
+                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="HTML5">
                                     <ImHtmlFive className="hover:text-orange-500" />
                                 </div>
 
 
-                                <div className="bg-gray-100 rounded-full p-5 tooltip-bottom tooltip" data-tip="CSS3">
+                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="CSS3">
                                     <SiCss3 className="hover:text-blue-500" />
                                 </div>
 
 
-                                <div className="bg-gray-100 rounded-full p-5 tooltip-bottom tooltip" data-tip="JavaScript">
+                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="JavaScript">
                                     <IoLogoJavascript className="hover:text-yellow-400" />
                                 </div>
 
 
-                                <div className="bg-gray-100 rounded-full p-5 tooltip-bottom tooltip" data-tip="Tailwind">
+                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="Tailwind">
                                     <SiTailwindcss className="hover:text-blue-500" />
                                 </div>
 
 
-                                <div className="bg-gray-100 rounded-full p-5 tooltip-bottom tooltip" data-tip="React">
+                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="React">
                                     <FaReact className="hover:text-blue-300" />
                                 </div>
 
 
-                                <div className="bg-gray-100 rounded-full p-5 tooltip-bottom tooltip" data-tip="Firebase">
+                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="Firebase">
                                     <SiFirebase className="hover:text-yellow-500" />
                                 </div>
 
 
-                                <div className="bg-gray-100 rounded-full p-5 tooltip-bottom tooltip" data-tip="Swift">
+                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="Swift">
                                     <SiSwift className="hover:text-orange-400" />
                                 </div>
 
 
-                                <div className="bg-gray-100 rounded-full p-5 tooltip-bottom tooltip" data-tip="MongoDB">
+                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="MongoDB">
                                     <SiMongodb className="hover:text-green-500" />
                                 </div>
 
 
-                                <div className="bg-gray-100 rounded-full p-5 tooltip-bottom tooltip" data-tip="Node.js">
+                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="Node.js">
                                     <FaNodeJs className="hover:text-green-400" />
                                 </div>
 

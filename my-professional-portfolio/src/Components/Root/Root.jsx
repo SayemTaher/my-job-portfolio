@@ -23,7 +23,7 @@ const Root = () => {
         const fakeLoader = () =>{
             setTimeout(() =>{
                 setIsLoading(false)
-            },2000)
+            },1000)
         }
 
         fakeLoader()
@@ -33,7 +33,10 @@ const Root = () => {
 
 
     return isLoading? (
-        <Loader></Loader>
+        
+        <div className="overflow-hidden">
+            <Loader></Loader>
+        </div>
     ) : (
         
         <div className="overflow-hidden">

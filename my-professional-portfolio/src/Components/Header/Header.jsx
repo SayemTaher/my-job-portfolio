@@ -12,26 +12,28 @@ const Header = () => {
 
     const links =
 
-        <div className='flex flex-col gap-3 p-3  ' id='navigation'>
+        <div className='flex flex-col gap-3 p-3 w-[600px] font-bold   ' id='navigation'>
 
 
-            <NavLink to='/' className=" p-1 w-[50px]"><li >Home</li></NavLink>
-            <NavLink to='/projects' className="p-1 w-[50px]"><li>Projects</li></NavLink>
-            <NavLink to='/education' className=" p-1 w-[50px]"><li>Education</li></NavLink>
-            <NavLink to='/certificates' className=" p-1 w-[50px]"><li>Certificates</li></NavLink>
+            <NavLink to='/' className=" p-1 "><li >Home</li></NavLink>
+            <NavLink to='/projects' className="p-1 "><li>Front-End</li></NavLink>
+            <NavLink to='/mobile' className="p-1 "><li>App Development</li></NavLink>
+            <NavLink to='/education' className=" p-1 "><li>Education</li></NavLink>
+            <NavLink to='/work' className="p-1 "><li>Work</li></NavLink>
+            <NavLink to='/certificates' className=" p-1 "><li>Certificates</li></NavLink>
 
 
         </div>
 
     return (
-        <div className=" z-50  fixed w-[300px]   lg:w-[1280px] p-2 bg-white font-mulish  bg-opacity-90">
+        <div className=" z-50  fixed w-[380px]   lg:w-[1280px] p-2 bg-white font-mulish  bg-opacity-90">
             <div className="navbar  flex items-center  ">
                 <div className="navbar-start ">
                     <div className="dropdown ">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-4xl" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
                         </div>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-primaryBlue text-white rounded-box w-52">
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-xl bg-gray-100 text-blue-900 rounded-box w-64">
                             {links}
 
                         </ul>
@@ -56,7 +58,7 @@ const Header = () => {
 
                     </div>
 
-                    <div className="flex gap-1 cursor-pointer hover:bg-primaryGreen justify-center text-center lg:w-[150px] w-[180px]  items-center bg-primaryBlue text-white  p-2 rounded-full ">
+                    <div className="flex gap-1 cursor-pointer hover:bg-primaryGreen justify-center text-center lg:w-[150px] w-[180px]  lg:-ml-0  items-center bg-primaryBlue text-white  p-2 rounded-full ">
                         <MdOutlineFileDownload className="lg:text-2xl   text-center"></MdOutlineFileDownload>
                         <a href="https://drive.google.com/file/d/1DrXQvwhqnSTdvYvzmelxlBMvZOqDn82o/view?usp=sharing" download="document.pdf">
 
