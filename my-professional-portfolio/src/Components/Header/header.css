@@ -1,0 +1,17 @@
+@keyframes expandBorder {
+    from {
+        border-bottom-width: 0px;
+    }
+    to {
+        border-bottom-width: 2px;
+    }
+}
+
+#navigation a.active {
+    border-bottom: 0px solid white; /* Initial border size */
+    width: 80px;
+    animation: expandBorder 0.3s ease forwards; /* Apply animation */
+}
+
+
+

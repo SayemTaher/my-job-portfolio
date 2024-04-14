@@ -11,6 +11,9 @@ import {
 } from "react-router-dom";
 import Home from './Components/Home/Home.jsx';
 import { HelmetProvider } from 'react-helmet-async';
+import Projects from './Components/Projects/Projects.jsx';
+import Education from './Components/Education/Education.jsx';
+import Certificates from './Components/Certificates/Certificates.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +24,18 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>
+      },
+      {
+        path:'/projects',
+        element:<Projects></Projects>
+      },
+      {
+        path:'/education',
+        element:<Education></Education>
+      },
+      {
+        path:'/certificates',
+        element:<Certificates></Certificates>
       }
 
     ]

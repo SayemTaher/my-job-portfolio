@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "title": "Bus Ticket Sell Website",
+      "description": "This simple platform offers a range of features, including the ability to select up to four seats, utilize coupons for discounts, view your selected items, and easily submit your order. The main objective is to give users a certain feeling how a real life application may look like in terms of purchasing tickets on online",
+      "image": "https://i.ibb.co/54hzj9K/Screenshot-2024-04-09-at-15-12-09.png",
+      "technology": ["HTML", "CSS", "JavaScript"],
+      "type": "JS Based",
+      "website_link": "https://sayemtaher.github.io/ph-assignment-05/"
+    },
+    {
+      "id": 2,
+      "title": " Book Library Website ",
+      "description": "This app, built entirely with React and React Router, makes it easy for users to dive into book details. You can add books to your selection, wishlist, or mark them as read.Also you can find the books that you read or added in your wishlist in the book section. Plus, there are handy stats for each book and sorting options for convenience",
+      "image": "https://i.ibb.co/Qnzp6zm/Screenshot-2024-04-09-at-15-12-25.png",
+      "technology": ["React", "Tailwind", "React Router"],
+      "type": "React Based",
+      "website_link": "http://curly-attention.surge.sh"
+    },
+    {
+      "id": 3,
+      "title": "Social Site Application",
+      "description": "This dynamic website displays information of users in different category. Allowing users to interact with the application like searching posts in category , marking posts as read and look for the latest post. I created this simple single page application to provide users a feeling of interacting in social platforms.",
+      "image": "https://i.ibb.co/Scf9Nhs/Screenshot-2024-04-09-at-15-17-40.png",
+      "technology": ["HTML", "JavaScript", "Tailwind"],
+      "type": "JS Based",
+      "website_link": "https://enchanting-lebkuchen-875e7a.netlify.app"
+    }
+  ]
+  
