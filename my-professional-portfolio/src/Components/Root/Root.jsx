@@ -36,7 +36,7 @@ const Root = () => {
         <Loader></Loader>
     ) : (
         
-        <div>
+        <div className="overflow-hidden">
             <div className="mx-auto container  scroll-smooth ">
             <Header></Header>
             <div className="  z-10 font-mulish ">

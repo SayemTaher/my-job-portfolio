@@ -24,7 +24,7 @@ const Header = () => {
         </div>
 
     return (
-        <div className=" z-50  fixed   w-[1280px] p-2 bg-white font-mulish  bg-opacity-90">
+        <div className=" z-50  fixed w-[300px]   lg:w-[1280px] p-2 bg-white font-mulish  bg-opacity-90">
             <div className="navbar  flex items-center  ">
                 <div className="navbar-start ">
                     <div className="dropdown ">
@@ -37,11 +37,11 @@ const Header = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="navbar-center">
-                    <Link to='/'><a className="btn btn-ghost text-xl">Sayem I Taher</a></Link>
+                <div className="navbar-center hidden lg:flex ">
+                    <Link to='/'><a className="btn btn-ghost text-sm lg:text-xl">Sayem I Taher</a></Link>
                 </div>
                 <div className="navbar-end flex gap-3 items-center">
-                    <div className="mr-5 flex gap-5 text-xl items-center">
+                    <div className="mr-5 hidden  lg:flex gap-5 text-xl items-center">
 
 
                         <div className="tooltip tooltip-bottom " data-tip="GitHub">
@@ -56,11 +56,11 @@ const Header = () => {
 
                     </div>
 
-                    <div className="flex gap-1 cursor-pointer hover:bg-primaryGreen justify-center text-center w-[150px] items-center bg-primaryBlue text-white  p-2 rounded-full ">
-                        <MdOutlineFileDownload className="text-2xl text-center"></MdOutlineFileDownload>
+                    <div className="flex gap-1 cursor-pointer hover:bg-primaryGreen justify-center text-center lg:w-[150px] w-[180px]  items-center bg-primaryBlue text-white  p-2 rounded-full ">
+                        <MdOutlineFileDownload className="lg:text-2xl   text-center"></MdOutlineFileDownload>
                         <a href="https://drive.google.com/file/d/1DrXQvwhqnSTdvYvzmelxlBMvZOqDn82o/view?usp=sharing" download="document.pdf">
 
-                            <button  >Download CV </button></a>
+                            <button  className=" text-sm">Download CV </button></a>
                     </div>
 
                 </div>

@@ -42,25 +42,25 @@ const Hero = () => {
         return () => clearInterval(interval);
     }, [i]);
     return (
-        <div className="flex justify-between items-center h-[980px]  pl-5 pr-5">
+        <div className="flex   justify-between mx-auto container items-center h-[800px] lg:h-[900px] ">
                 <div className="flex flex-col gap-5" data-aos="fade-right">
-                    <div className="border-l-8 border-darknavy pl-4 ">
-                        <div className="flex flex-col ">
-                            <h1 className="text-6xl font-bold tracking-wide" id="gradient-text">Sayem Ibne Taher</h1>
-                            <span className="mt-4 text- text-xl ml-2 text-gray-600">Front-End | UI & UX | iOS</span>
+                    <div className="lg:border-l-8 lg:border-darknavy lg:pl-4 ">
+                        <div className="flex flex-col lg:text-left text-center ">
+                            <h1 className="lg:text-6xl text-4xl  font-bold tracking-wide" id="gradient-text">Sayem Ibne Taher</h1>
+                            <span className="mt-4 text- text-xl  text-gray-600">Front-End | UI & UX | iOS</span>
                         </div>
 
                     </div>
-                    <div>
+                    <div className=" flex justify-center lg:text-left text-center items-center lg:justify-start lg:items-start">
                         <Fade>
-                            <p className="text-sm text-darknavy mt-5 max-w-[600px] leading-6" > {text}</p>
+                            <p className="text-sm text-darknavy mt-5 max-w-[350px] lg:max-w-[600px] leading-6" > {text}</p>
                         </Fade>
 
                     </div>
-                    <div className="flex flex-col gap-5 mt-5">
+                    <div className="flex flex-col gap-5 mt-5 justify-center lg:items-start lg:justify-start items-center">
                         <p className="text-xl border-b-2 border-primaryBlue tracking-wide font-bold pb-2 w-[120px]">Expertise In</p>
                         <Fade damping={0.5} cascade>
-                            <div className="flex flex-row gap-5 items-center text-2xl" id="wavy-animation">
+                            <div className="flex flex-row flex-wrap justify-center items-center lg:justify-start lg:items-start gap-5 text-2xl" id="wavy-animation">
 
                                 <div className="bg-gray-100 rounded-full p-5 tooltip-bottom tooltip" data-tip="HTML5">
                                     <ImHtmlFive className="hover:text-orange-500" />
@@ -110,7 +110,7 @@ const Hero = () => {
                         </Fade>
                     </div>
                 </div>
-                <div data-aos="fade-left">
+                <div data-aos="fade-left " className="hidden lg:flex">
 
                     <img className="w-[400px]" src="https://i.ibb.co/cbNCW69/4421964-removebg-preview.png" alt="img" />
 
