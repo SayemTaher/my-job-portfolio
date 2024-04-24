@@ -29,21 +29,21 @@ const Hero = () => {
     
     
     return (
-        <div className="flex mx-auto container justify-center bg-no-repeat bg-cover bg-[url('https://i.ibb.co/4JQ1Lc4/Group-99.png')]  min-h-screen  font-mulish" data-aos="fade-up-right">
+        <div className="flex mx-auto container justify-center bg-no-repeat bg-cover bg-[url('https://i.ibb.co/4JQ1Lc4/Group-99.png')] pt-20 lg:pt-28 pb-28    font-mulish" data-aos="fade-up-right">
 
 
             <div className="flex flex-col gap-5 items-center justify-center " data-aos="fade-up-right">
 
                 <div data-aos="fade-up" className="mt-20">
                     <div className="pb-2">
-                        <span className=" border-l-4 pl-2 border-darknavy mb-10 text-2xl font-bold text-primaryGreen ">Sayem Ibne Taher</span>
+                        <span className=" border-l-4 pl-2 border-darknavy mb-10 text-lg lg:text-2xl font-bold text-primaryGreen ">Sayem Ibne Taher</span>
                     </div>
 
-                    <h1 className="lg:text-6xl text-4xl font-bold text-darknavy">Full-Stack Developer</h1>
+                    <h1 className="lg:text-6xl text-3xl font-bold text-darknavy">Full-Stack Developer</h1>
 
                 </div>
                 <div>
-                    <p className="lg:w-[800px] w-[400px] text-justify text-gray-500"> As a Full-Stack Developer, I specialize in HTML, CSS, JavaScript, Tailwind, React, React Router, Firebase, MongoDB, and Node.js. I also have a passion for Swift and SwiftUI, with hands-on experience in both. My portfolio showcases my latest projects, emphasizing my design and development skills.</p>
+                    <p className="lg:w-[800px] w-[350px] text-center  lg:text-justify text-gray-500"> As a Full-Stack Developer, I specialize in HTML, CSS, JavaScript, Tailwind, React, React Router, Firebase, MongoDB, and Node.js. I also have a passion for Swift and SwiftUI, with hands-on experience in both. My portfolio showcases my latest projects, emphasizing my design and development skills.</p>
                 </div>
                 <div className="  lg:ml-5 w-[150px] flex lg:hidden md:hidden ">
                         <span className=" border-b-4 text-2xl  pb-2 border-gray-500  font-bold  text-darknavy">Expertise In </span>
@@ -52,7 +52,7 @@ const Hero = () => {
                     <div className=" hidden lg:flex  lg:ml-5 w-[150px]  ">
                         <span className="mb-5 border-b-4 text-2xl  pb-2 border-gray-500  font-bold  text-darknavy">Expertise In </span>
                     </div>
-                    <div className="mt-5 container mx-auto">
+                    <div className="mt-5 lg:container lg:mx-auto w-[400px] ">
                         <Marquee speed={100} delay={0} pauseOnHover={true}>
                             <div className="flex gap-10 mt-5 mb-5">
                                 <div className="h-[150px] rounded-xl border-2 border-darknavy  backdrop-blur-md ml-10 w-[250px] gap-5 flex  items-center justify-center  ">

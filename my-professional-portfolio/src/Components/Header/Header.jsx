@@ -39,7 +39,7 @@ const Header = () => {
                 </div>
             </div>
             <div className="navbar-center">
-                <a className="btn btn-ghost text-xl">Sayem Ibne Taher</a>
+                <a className="btn btn-ghost lg:text-xl text-sm">Sayem Ibne Taher</a>
             </div>
             <div className="navbar-end">
                 <Link to='https://www.linkedin.com/in/sayem-ibne-taher/' className="lg:flex hidden">
@@ -55,10 +55,10 @@ const Header = () => {
                     </div>
                 </button>
                 </Link>
-                <Link to='https://drive.google.com/file/d/1DrXQvwhqnSTdvYvzmelxlBMvZOqDn82o/view?usp=share_link' className="bg-darknavy hover:bg-primaryGreen flex gap-2 items-center text-white p-2 rounded-full w-[150px] text-center">
+                <Link to='https://drive.google.com/file/d/1DrXQvwhqnSTdvYvzmelxlBMvZOqDn82o/view?usp=share_link' className="bg-darknavy hover:bg-primaryGreen flex gap-2 justify-center items-center text-white lg:p-2 p-1 rounded-full w-[90px] text-xs  lg:w-[120px] text-center">
                 <MdOutlineFileDownload className="text-lg"></MdOutlineFileDownload> 
                     <button >
-                        Download CV
+                        Resume
                     </button>
                 </Link>
             </div>
