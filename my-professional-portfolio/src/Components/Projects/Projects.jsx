@@ -9,6 +9,7 @@ import { SiMongodb } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa6";
 import { Fade } from "react-awesome-reveal";
 import FrontEnd from "../Front-End/FrontEnd";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -17,6 +18,9 @@ const Projects = () => {
     return (
         <Fade triggerOnce damping={0.3} cascade>
             <div className="mx-auto flex flex-col  container ">
+            <Helmet>
+                    <title>Portfolio | Front-End</title>
+                </Helmet>
             
                 <div className="flex items-center justify-between  mt-32">
                     <div data-aos="fade-up-right" className="lg:flex hidden">
@@ -30,8 +34,8 @@ const Projects = () => {
                                     <div className="h-[4px] rounded-full w-[300px] bg-primaryBlue"></div>
                                 </div>
                             
-                                <div className="lg:max-w-[600px] max-w-[400px]">
-                                    <p className="text-gray-500">For the past two years, Ive been dedicated to my growth as a web developer. <b> I have completed 15+ projects using JS, React, React Router, and Firebase authentication, while gaining proficiency in HTML, CSS, and Tailwind </b>. I am currently building modern websites with Node.js and MongoDB.  My ultimate goal is to become a skilled Full Stack Developer who creates impactful products.</p>
+                                <div className="lg:max-w-[600px] max-w-[360px]">
+                                    <p className="text-gray-500 text-xs">For the past two years, Ive been dedicated to my growth as a web developer. <b> I have completed 15+ projects using JS, React, React Router, and Firebase authentication, while gaining proficiency in HTML, CSS, and Tailwind </b>. I am currently building modern websites with Node.js and MongoDB.  My ultimate goal is to become a skilled Full Stack Developer who creates impactful products.</p>
                                 </div>
                             
                             

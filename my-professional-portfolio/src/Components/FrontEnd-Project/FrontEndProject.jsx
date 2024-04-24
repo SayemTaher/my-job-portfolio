@@ -8,7 +8,7 @@ const FrontEndProject = ({ project }) => {
     const { id, title, description, image, technology, type, website_link } = project
     return (
        
-            <div className="flex  mockup-window container mx-auto lg:m-0 lg:flex-row bg-gray-100 shadow-md gap-10 justify-center items-center rounded-xl w-[400px]  lg:w-[1170px]">
+            <div className="flex  mockup-window container mx-auto lg:m-0 lg:flex-row bg-gray-100  shadow-md gap-10 justify-center items-center rounded-xl w-[360px]  lg:w-[1170px]">
                 <div className=" mt-5  flex lg:justify-start lg:items-start justify-center items-center lg:flex-row flex-col gap-5" data-aos="fade-up">
                 
                     <div className="m-5">

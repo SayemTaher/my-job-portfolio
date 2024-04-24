@@ -8,7 +8,8 @@ import { SiSwift } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa6";
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
+import Marquee from "react-fast-marquee";
 
 AOS.init({
     // Global settings
@@ -18,104 +19,97 @@ AOS.init({
     delay: 0, // Delay before the animation starts (in milliseconds)
     once: false, // Whether the animation should only happen once
     mirror: true, // Whether the animation should be mirrored on scroll up and scroll down
-  });
+});
 
-import { Fade } from "react-awesome-reveal";
+
 import './hero.css'
-import { useEffect, useState } from "react";
+
 
 const Hero = () => {
-    const [text, setText] = useState('');
-    const [i, setI] = useState(0);
-    const speed = 10;
-    useEffect(() => {
-        const fullText = "As a front-end developer, I specialize in HTML, CSS, JavaScript, Tailwind, React, React Router, Firebase, MongoDB, and Node.js. I also have a passion for Swift and SwiftUI, with hands-on experience in both. My portfolio showcases my latest projects, emphasizing my design and development skills.";
-        const interval = setInterval(() => {
-            if (i < fullText.length) {
-                setText(prevText => prevText + fullText.charAt(i));
-                setI(prevI => prevI + 1);
-            } else {
-                clearInterval(interval);
-            }
-        }, speed);
-
-        return () => clearInterval(interval);
-    }, [i]);
+    
+    
     return (
-        <div className="flex   justify-between mx-auto container items-center h-[750px] lg:h-[900px] ">
-                <div className="flex flex-col gap-5" data-aos="fade-right">
-                    <div className="lg:border-l-8 lg:border-darknavy lg:pl-4 ">
-                        <div className="flex flex-col lg:text-left text-center ">
-                            <h1 className="lg:text-6xl text-4xl  font-bold tracking-wide" id="gradient-text">Sayem Ibne Taher</h1>
-                            <span className="mt-4  text-sm lg:text-xl  text-gray-600">Front-End | UI & UX | iOS</span>
-                        </div>
+        <div className="flex mx-auto container justify-center bg-no-repeat bg-cover bg-[url('https://i.ibb.co/4JQ1Lc4/Group-99.png')]  min-h-screen  font-mulish" data-aos="fade-up-right">
 
+
+            <div className="flex flex-col gap-5 items-center justify-center " data-aos="fade-up-right">
+
+                <div data-aos="fade-up" className="mt-20">
+                    <div className="pb-2">
+                        <span className=" border-l-4 pl-2 border-darknavy mb-10 text-2xl font-bold text-primaryGreen ">Sayem Ibne Taher</span>
                     </div>
-                    <div className=" flex justify-center lg:text-left text-center items-center lg:justify-start lg:items-start">
-                        <Fade>
-                            <p className="text-sm text-darknavy mt-5 max-w-[350px] lg:max-w-[600px] leading-6" > {text}</p>
-                        </Fade>
 
+                    <h1 className="lg:text-6xl text-4xl font-bold text-darknavy">Full-Stack Developer</h1>
+
+                </div>
+                <div>
+                    <p className="lg:w-[800px] w-[400px] text-justify text-gray-500"> As a Full-Stack Developer, I specialize in HTML, CSS, JavaScript, Tailwind, React, React Router, Firebase, MongoDB, and Node.js. I also have a passion for Swift and SwiftUI, with hands-on experience in both. My portfolio showcases my latest projects, emphasizing my design and development skills.</p>
+                </div>
+                <div className="  lg:ml-5 w-[150px] flex lg:hidden md:hidden ">
+                        <span className=" border-b-4 text-2xl  pb-2 border-gray-500  font-bold  text-darknavy">Expertise In </span>
                     </div>
-                    <div className="flex flex-col gap-5 mt-5 justify-center lg:items-start lg:justify-start items-center">
-                        <p className="text-xl border-b-2 border-primaryBlue tracking-wide font-bold pb-2 w-[120px]">Expertise In</p>
-                        <Fade damping={0.5} cascade>
-                            <div className="flex flex-row flex-wrap justify-center items-center lg:justify-start lg:items-start gap-5 text-xl lg:text-2xl" id="wavy-animation">
+                <div className="lg:pt-10 pt-5">
+                    <div className=" hidden lg:flex  lg:ml-5 w-[150px]  ">
+                        <span className="mb-5 border-b-4 text-2xl  pb-2 border-gray-500  font-bold  text-darknavy">Expertise In </span>
+                    </div>
+                    <div className="mt-5 container mx-auto">
+                        <Marquee speed={100} delay={0} pauseOnHover={true}>
+                            <div className="flex gap-10 mt-5 mb-5">
+                                <div className="h-[150px] rounded-xl border-2 border-darknavy  backdrop-blur-md ml-10 w-[250px] gap-5 flex  items-center justify-center  ">
+                                    <ImHtmlFive className="text-5xl text-primaryBlue"></ImHtmlFive>
+                                    <span>HTML</span>
 
-                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="HTML5">
-                                    <ImHtmlFive className="hover:text-orange-500" />
                                 </div>
+                                <div className="h-[150px]  rounded-xl border-2 border-darknavy  backdrop-blur-md   gap-5 flex items-center justify-center w-[250px]  ">
+                                    <SiCss3 className="text-5xl text-orange-500"></SiCss3>
+                                    <span>CSS</span>
 
-
-                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="CSS3">
-                                    <SiCss3 className="hover:text-blue-500" />
                                 </div>
+                                <div className="h-[150px] rounded-xl border-2 border-darknavy  backdrop-blur-md   gap-5 flex items-center justify-center w-[250px]  ">
+                                    <SiTailwindcss className="text-5xl text-blue-400"></SiTailwindcss>
+                                    <span>Tailwind</span>
 
-
-                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="JavaScript">
-                                    <IoLogoJavascript className="hover:text-yellow-400" />
                                 </div>
+                                <div className="h-[150px] rounded-xl border-2 border-darknavy  backdrop-blur-md   gap-5 flex items-center justify-center w-[250px]  ">
+                                    <IoLogoJavascript className="text-5xl text-yellow-500"></IoLogoJavascript>
+                                    <span>Javascipt</span>
 
-
-                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="Tailwind">
-                                    <SiTailwindcss className="hover:text-blue-500" />
                                 </div>
+                                <div className="h-[150px] rounded-xl border-2  border-darknavy  backdrop-blur-md   gap-5 flex items-center justify-center w-[250px]  ">
+                                    <FaReact className="text-5xl text-blue-500"></FaReact>
+                                    <span>React</span>
 
-
-                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="React">
-                                    <FaReact className="hover:text-blue-300" />
                                 </div>
+                                <div className="h-[150px] rounded-xl  border-2 border-darknavy  backdrop-blur-md    gap-5 flex items-center justify-center w-[250px]  ">
+                                    <FaNodeJs className="text-5xl text-primaryGreen"></FaNodeJs>
+                                    <span>Node.Js</span>
 
-
-                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="Firebase">
-                                    <SiFirebase className="hover:text-yellow-500" />
                                 </div>
+                                <div className="h-[150px] rounded-xl  border-2 border-darknavy   backdrop-blur-md  gap-5 flex items-center justify-center w-[250px]  ">
+                                    <SiMongodb className="text-5xl text-green-500"></SiMongodb>
+                                    <span>MongoDB</span>
 
-
-                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="Swift">
-                                    <SiSwift className="hover:text-orange-400" />
                                 </div>
+                                <div className="h-[150px] rounded-xl border-2 border-darknavy  backdrop-blur-md   gap-5 flex items-center justify-center w-[250px]  ">
+                                    <SiFirebase className="text-5xl text-yellow-400"></SiFirebase>
+                                    <span>Firebase</span>
 
-
-                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="MongoDB">
-                                    <SiMongodb className="hover:text-green-500" />
                                 </div>
+                                <div className="h-[150px] rounded-xl border-2 border-darknavy   backdrop-blur-md  gap-5 flex items-center justify-center w-[250px]  ">
+                                    <SiSwift className="text-5xl text-orange-500"></SiSwift>
+                                    <span>Swift</span>
 
-
-                                <div className="bg-gray-100 rounded-full lg:p-5 p-3 tooltip-bottom tooltip" data-tip="Node.js">
-                                    <FaNodeJs className="hover:text-green-400" />
                                 </div>
 
                             </div>
-                        </Fade>
+
+                        </Marquee>
                     </div>
                 </div>
-                <div data-aos="fade-left " className="hidden lg:flex">
 
-                    <img className="w-[400px]" src="https://i.ibb.co/cbNCW69/4421964-removebg-preview.png" alt="img" />
+            </div>
 
-                </div>
-           
+
         </div>
     );
 };

@@ -25,6 +25,15 @@
       "technology": ["HTML", "JavaScript", "Tailwind"],
       "type": "JS Based",
       "website_link": "https://enchanting-lebkuchen-875e7a.netlify.app"
+    },
+    {
+      "id": 4,
+      "title": "Penthouse Website",
+      "description": "A fully optimized react and react router  based Luxurious Penthouse website that uses Google , GitHub based authentication that allows users to have full access to the content. This website is updated from time to time basis enabling users to have a seamless experience. This website explicitly uses modern web tools and technologies for smooth animation and dynamic user experience.",
+      "image": "https://i.ibb.co/NntBwQN/Screenshot-2024-04-18-at-01-51-42.png",
+      "technology": ["React", "Tailwind", "Firebase"],
+      "type": "React Based",
+      "website_link": "https://real-estate-web-5ee4a.web.app"
     }
   ]
   

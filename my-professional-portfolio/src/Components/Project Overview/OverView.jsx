@@ -2,11 +2,13 @@ import { FiAirplay } from "react-icons/fi";
 import { FaApple } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
-import { IoIosArrowForward } from "react-icons/io";
+import { GoArrowUpRight } from "react-icons/go";
+
 const OverView = () => {
     return (
         <Fade triggerOnce damping={0.5} cascade>
             <div className="flex flex-col justify-center   mt-10 mb-10">
+                
 
                 <div className="flex flex-col gap-2 items-center lg:items-start text-center lg:text-left" data-aos="fade-up-right">
                     <h1 className="text-4xl  pb-2 w-[400px] font-bold">Focused Areas </h1>
@@ -153,7 +155,7 @@ const OverView = () => {
 
 
                                 <div className="flex flex-end mt-5">
-                                    <Link to='/projects'><button className="btn bg-darknavy hover:bg-primaryBlue w-[150px] text-white p-2 rounded-full text-center">View Projects <IoIosArrowForward></IoIosArrowForward> </button></Link>
+                                    <Link to='/projects'><button className="btn bg-darknavy hover:bg-primaryBlue w-[150px] text-white p-2 rounded-full text-center"><GoArrowUpRight></GoArrowUpRight> View Projects  </button></Link>
                                 </div>
                             </div>
 
@@ -218,7 +220,7 @@ const OverView = () => {
                                 
                                     <div className="flex flex-end mt-5">
                                         {/* <Link to='/frontEnd'><button className="btn btn-primary text-white">View Projects</button></Link> */}
-                                        <Link to='/mobileProjects'><button className="btn bg-darknavy hover:bg-primaryBlue w-[150px] text-white p-2 rounded-full text-center">View Projects <IoIosArrowForward></IoIosArrowForward> </button></Link>
+                                        <Link to='/mobileProjects'><button className="btn bg-darknavy hover:bg-primaryBlue w-[150px] text-white p-2 rounded-full text-center"><GoArrowUpRight></GoArrowUpRight> View Projects  </button></Link>
                                     </div>
                                 
                             </div>
