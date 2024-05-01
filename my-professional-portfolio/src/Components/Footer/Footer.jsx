@@ -4,7 +4,7 @@ import { BsLinkedin } from "react-icons/bs";
 
 const Footer = () => {
     return (
-        <footer className="footer flex flex-col pb-10  justify-center items-center bg-gray-100">
+        <footer className="footer flex flex-col pb-10  justify-center items-center ">
             <div className="grid  lg:grid-cols-3 lg:pl-40 pl-5 gap-10 justify-center  container mx-auto  grid-cols-2   p-10  w-full">
                 <nav className="flex flex-col gap-2">
                     <h6 className="footer-title">Projects</h6>

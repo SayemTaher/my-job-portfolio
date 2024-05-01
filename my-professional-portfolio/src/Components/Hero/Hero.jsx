@@ -8,8 +8,10 @@ import { SiSwift } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa6";
 import AOS from 'aos';
+import 'animate.css';
 import 'aos/dist/aos.css';
 import Marquee from "react-fast-marquee";
+import { Typewriter } from 'react-simple-typewriter';
 
 AOS.init({
     // Global settings
@@ -26,24 +28,45 @@ import './hero.css'
 
 
 const Hero = () => {
+    const handleType = (count) => {
+        console.log(count); // This logs the current word count
+    };
+
+    const handleDone = () => {
+        console.log(`Done typing!`);
+    };
     
     
     return (
-        <div className="flex mx-auto container justify-center bg-no-repeat bg-cover bg-[url('https://i.ibb.co/4JQ1Lc4/Group-99.png')] pt-20 lg:pt-28 pb-28    font-mulish" data-aos="fade-up-right">
+        <div className="flex mx-auto container justify-center bg-no-repeat bg-cover bg-[url('https://i.ibb.co/4JQ1Lc4/Group-99.png')] min-h-screen    font-mulish" data-aos="fade-up-right">
 
 
-            <div className="flex flex-col gap-5 items-center justify-center " data-aos="fade-up-right">
-
-                <div data-aos="fade-up" className="mt-20">
-                    <div className="pb-2">
-                        <span className=" border-l-4 pl-2 border-darknavy mb-10 text-lg lg:text-2xl font-bold text-primaryGreen ">Sayem Ibne Taher</span>
+            <div className="flex flex-col gap-5 mt-20 lg:mt-0 items-center justify-center " data-aos="fade-up-right">
+            <div className="pb-2 text-left">
+                        <span className=" border-l-4 pl-2 border-darknavy  text-lg lg:text-2xl font-bold text-primaryGreen ">Sayem Ibne Taher</span>
                     </div>
+                <div data-aos="fade-up">
+                    
 
-                    <h1 className="lg:text-6xl text-3xl font-bold text-darknavy">MERN-Stack Developer</h1>
+                    <div>
+                    <h1 className="lg:text-6xl pb-4 animate__animated animate__fadeInDown text-3xl font-bold text-darknavy">
+                    <Typewriter
+                            words={["MERN-Stack Developer", "Front-End Developer","MERN-Stack Developer"]}
+                            loop={1}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                            onLoopDone={handleDone}
+                            onType={handleType}
+                        />
+                    </h1>
+                    </div>
 
                 </div>
                 <div>
-                    <p className="lg:w-[800px] w-[350px] text-center  lg:text-justify text-gray-500"> As a MERN-Stack Developer, I specialize in HTML, CSS, JavaScript, Tailwind, React, React Router, Firebase, MongoDB, Express.Js and Node.Js. I also have a passion for Swift and SwiftUI, with hands-on experience in both. My portfolio showcases my latest projects, emphasizing my design and development skills.</p>
+                    <p className="lg:w-[800px] w-[350px] text-center  lg:text-justify "> As a MERN-Stack Developer, I specialize in HTML, CSS, JavaScript, Tailwind, React, React Router, Firebase, MongoDB, Express.Js and Node.Js. I also have a passion for Swift and SwiftUI, with hands-on experience in both. My portfolio showcases my latest projects, emphasizing my design and development skills.</p>
                 </div>
                 <div className="  lg:ml-5 w-[150px] flex lg:hidden md:hidden ">
                         <span className=" border-b-4 text-2xl  pb-2 border-gray-500  font-bold  text-darknavy">Expertise In </span>

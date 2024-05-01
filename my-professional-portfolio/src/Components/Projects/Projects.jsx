@@ -10,10 +10,17 @@ import { FaNodeJs } from "react-icons/fa6";
 import { Fade } from "react-awesome-reveal";
 import FrontEnd from "../Front-End/FrontEnd";
 import { Helmet } from "react-helmet-async";
-
+import { Typewriter } from 'react-simple-typewriter';
 import 'animate.css';
 
 const Projects = () => {
+    const handleType = (count) => {
+        console.log(count); // This logs the current word count
+    };
+
+    const handleDone = () => {
+        console.log(`Done typing!`);
+    };
     
     return (
         <Fade triggerOnce damping={0.3} cascade>
@@ -22,15 +29,27 @@ const Projects = () => {
                     <title>Portfolio | Front-End</title>
                 </Helmet>
             
-                <div className="flex lg:flex-row flex-col gap-5 items-center justify-center pt-20 lg:pt-28 pb-28" data-aos="fade-up">
+                <div className="flex lg:flex-row flex-col gap-5 items-center p-4 justify-center   min-h-screen" data-aos="fade-up">
                     <div data-aos="fade-up-right"  >
-                        <img className="lg:h-[400px] h-[100px]  object-cover w-[300px] animate__animated animate__backInDown rounded-xl shadow-xl lg:w-[600px]" src="https://i.ibb.co/MNYSQSR/deviceframes.png" alt="img" />
+                        <img className="lg:h-[400px] h-[400px] object-contain  lg:object-cover w-[400px] animate__animated animate__backInDown rounded-xl  lg:w-[600px]" src="https://i.ibb.co/GcnKFbr/deviceframes-2.png" alt="img" />
                     </div>
                     
                         <div className="flex flex-col gap-2 justify-center items-center text-center lg:text-left" data-aos="fade-in">
                             
                                 <div data-aos="fade-in-right" className=" flex flex-col items-center justify-center gap-5 pb-5">
-                                    <h1 className=" lg:text-5xl text-4xl max-w-[300px] animate__animated animate__backInDown font-bold">MERN-Stack Development</h1>
+                                    <h1 className=" lg:text-5xl text-4xl max-w-[300px] animate__animated animate__backInDown font-bold">
+                                    <Typewriter
+                            words={["MERN-Stack Development", "Front-End Development",]}
+                            loop={1}
+                            cursor
+                            cursorStyle='|'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                            onLoopDone={handleDone}
+                            onType={handleType}
+                        />
+                                    </h1>
                                     <div className="h-[4px] rounded-full w-[300px] bg-primaryBlue"></div>
                                 </div>
                             

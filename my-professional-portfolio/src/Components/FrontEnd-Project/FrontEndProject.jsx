@@ -12,7 +12,7 @@ const FrontEndProject = ({ project }) => {
                 <div className=" mt-5  flex lg:justify-between lg:items-start justify-center items-center lg:flex-row flex-col gap-5" data-aos="fade-up">
                 
                     <div className="m-5">
-                        <img className="lg:h-[400px] animate__animated animate__backInLeft  object-cover lg:w-[600px] rounded-none shadow-xl lg:shadow-sm lg:rounded-2xl " src={image} alt={`img of ${id}`} />
+                        <img className="lg:h-[400px] animate__animated animate__backInLeft  object-cover lg:w-[600px]  shadow-xl lg:shadow-sm rounded-xl lg:rounded-2xl " src={image} alt={`img of ${id}`} />
                     </div>
                 
                     <div className="flex flex-col justify-center items-center p-5 text-center lg:text-left lg:justify-start lg:items-start gap-5">
