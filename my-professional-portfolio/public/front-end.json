@@ -1,18 +1,10 @@
 [
-    {
-      "id": 1,
-      "title": "Bus Ticket Sell Website",
-      "description": "This simple platform offers a range of features, including the ability to select up to four seats, utilize coupons for discounts, view your selected items, and easily submit your order. The main objective is to give users a certain feeling how a real life application may look like in terms of purchasing tickets on online",
-      "image": "https://i.ibb.co/54hzj9K/Screenshot-2024-04-09-at-15-12-09.png",
-      "technology": ["HTML", "CSS", "JavaScript"],
-      "type": "JS Based",
-      "website_link": "https://sayemtaher.github.io/ph-assignment-05/"
-    },
+  
     {
       "id": 2,
       "title": " Book Library Website ",
       "description": "This app, built entirely with React and React Router, makes it easy for users to dive into book details. You can add books to your selection, wishlist, or mark them as read.Also you can find the books that you read or added in your wishlist in the book section. Plus, there are handy stats for each book and sorting options for convenience",
-      "image": "https://i.ibb.co/Qnzp6zm/Screenshot-2024-04-09-at-15-12-25.png",
+      "image": "https://i.ibb.co/4SkfsG3/deviceframes-3.png",
       "technology": ["React", "Tailwind", "React Router"],
       "type": "React Based",
       "website_link": "http://curly-attention.surge.sh"
@@ -21,7 +13,7 @@
       "id": 3,
       "title": "Social Site Application",
       "description": "This dynamic website displays information of users in different category. Allowing users to interact with the application like searching posts in category , marking posts as read and look for the latest post. I created this simple single page application to provide users a feeling of interacting in social platforms.",
-      "image": "https://i.ibb.co/Scf9Nhs/Screenshot-2024-04-09-at-15-17-40.png",
+      "image": "https://i.ibb.co/ZhKtzmN/deviceframes-2.png",
       "technology": ["HTML", "JavaScript", "Tailwind"],
       "type": "JS Based",
       "website_link": "https://enchanting-lebkuchen-875e7a.netlify.app"
@@ -29,11 +21,19 @@
     {
       "id": 4,
       "title": "Penthouse Website",
-      "description": "A fully optimized react and react router  based Luxurious Penthouse website that uses Google , GitHub based authentication that allows users to have full access to the content. This website is updated from time to time basis enabling users to have a seamless experience. This website explicitly uses modern web tools and technologies for smooth animation and dynamic user experience.",
-      "image": "https://i.ibb.co/NntBwQN/Screenshot-2024-04-18-at-01-51-42.png",
+      "description": "A fully optimized react and react router  based Luxurious Penthouse website that uses Google , GitHub based authentication which offers users to have full access to the content. This website is updated from time to time basis enabling users to have a seamless experience. This website explicitly uses modern web tools and technologies for smooth animation and dynamic user experience.",
+      "image": "https://i.ibb.co/8dzXMtZ/deviceframes.png",
       "technology": ["React", "Tailwind", "Firebase"],
       "type": "React Based",
       "website_link": "https://real-estate-web-5ee4a.web.app"
-    }
+    },{
+    "id": 5,
+    "title": "Tourism Website",
+    "description": "A fully optimized MERN (MongoDB, Express.Js, React.Js, Node.Js)  based tourism website that uses Google , GitHub based authentication which allows users to have full access to the content.After signing in users can add , update, view and delete spots. This website explicitly uses modern web tools and technologies for smooth animation and dynamic user experience.",
+    "image": "https://i.ibb.co/MNYSQSR/deviceframes.png",
+    "technology": ["React", "Tailwind", "Firebase","MongoDB","Express.Js","Node.Js"],
+    "type": "MERN Based",
+    "website_link": "https://tourism-management-web.web.app"
+  }
   ]
   

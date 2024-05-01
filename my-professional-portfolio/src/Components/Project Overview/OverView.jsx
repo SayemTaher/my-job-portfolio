@@ -3,6 +3,7 @@ import { FaApple } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import { GoArrowUpRight } from "react-icons/go";
+import 'animate.css';
 
 const OverView = () => {
     return (
@@ -19,7 +20,7 @@ const OverView = () => {
                     <Fade>
                         <div className="flex flex-col m-5  gap-5 bg-gray-100 p-5 rounded-xl ">
                             <div className="flex justify-between  items-center ">
-                                <h1 className=" text-sm lg:text-xl font-bold">Front-End Development <sup className="font-normal  bg-primaryBlue  text-white lg:p-2 p-1 rounded-full">React Based</sup></h1>
+                                <h1  className="animate__animated animate__bounce text-sm lg:text-xl font-bold ">Front-End Development <sup className="font-normal  bg-primaryBlue  text-white lg:p-2 p-1 rounded-full">React Based</sup></h1>
                                 <FiAirplay className=" text-3xl lg:text-6xl"></FiAirplay>
 
                             </div>
@@ -84,15 +85,15 @@ const OverView = () => {
 
                                         </li>
                                         <li>
-                                            <hr />
+                                            <hr className="bg-primaryGreen"/>
                                             <div className="timeline-start timeline-box">MongoDB</div>
                                             <div className="timeline-middle">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
                                             </div>
-                                            <hr />
+                                            <hr className="bg-primaryGreen"/>
                                         </li>
                                         <li>
-                                            <hr />
+                                            <hr className="bg-primaryGreen" />
                                             <div className="timeline-start timeline-box">Node.js</div>
                                             <div className="timeline-middle">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
@@ -135,15 +136,15 @@ const OverView = () => {
                                             <hr className="bg-blue-400"/>
                                         </li>
                                         <li>
-                                            <hr />
+                                            <hr className="bg-blue-400"/>
                                             <div className="timeline-middle">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
                                             </div>
                                             <div className="timeline-end timeline-box text-sm">Node.Js</div>
-                                            <hr />
+                                            <hr className="bg-blue-400"/>
                                         </li>
                                         <li>
-                                            <hr />
+                                            <hr className="bg-blue-400"/>
                                             <div className="timeline-middle">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
                                             </div>

@@ -16,7 +16,7 @@ const Header = () => {
 
 
             <NavLink to='/' className=" p-1 "><li >Home</li></NavLink>
-            <NavLink to='/projects' className="p-1 "><li>Front-End</li></NavLink>
+            <NavLink to='/projects' className="p-1 "><li>MERN-Stack Development</li></NavLink>
             <NavLink to='/mobile' className="p-1 "><li>App Development</li></NavLink>
             <NavLink to='/education' className=" p-1 "><li>Education</li></NavLink>
             <NavLink to='/work' className="p-1 "><li>Work</li></NavLink>
@@ -55,7 +55,7 @@ const Header = () => {
                     </div>
                 </button>
                 </Link>
-                <Link to='https://drive.google.com/file/d/1DrXQvwhqnSTdvYvzmelxlBMvZOqDn82o/view?usp=share_link' className="bg-darknavy hover:bg-primaryGreen flex gap-2 justify-center items-center text-white lg:p-2 p-1 rounded-full w-[90px] text-xs  lg:w-[120px] text-center">
+                <Link to='https://drive.google.com/file/d/1zsPLS93Br4_kNwxyEaC31kykvyPzn2xj/view?usp=share_link' className="bg-darknavy hover:bg-primaryGreen flex gap-2 justify-center items-center text-white lg:p-2 p-1 rounded-full w-[90px] text-xs  lg:w-[120px] text-center">
                 <MdOutlineFileDownload className="text-lg"></MdOutlineFileDownload> 
                     <button >
                         Resume
