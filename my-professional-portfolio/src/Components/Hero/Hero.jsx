@@ -43,7 +43,7 @@ const Hero = () => {
 
             <div className="flex flex-col gap-5 mt-20 lg:mt-0 items-center justify-center " data-aos="fade-up-right">
             <div className="pb-2 text-left">
-                        <span className=" border-l-4 pl-2 border-darknavy  text-lg lg:text-2xl font-bold text-primaryGreen ">Sayem Ibne Taher</span>
+                        <span className=" border-l-4 pl-2 border-darknavy  text-lg lg:text-2xl font-bold text-blue-700 dark:text-white ">Sayem Ibne Taher</span>
                     </div>
                 <div data-aos="fade-up">
                     
@@ -51,7 +51,7 @@ const Hero = () => {
                     <div>
                     <h1 className="lg:text-6xl pb-4 animate__animated animate__fadeInDown text-3xl font-bold text-darknavy">
                     <Typewriter
-                            words={["MERN-Stack Developer", "Front-End Developer","MERN-Stack Developer"]}
+                            words={["Front-End Developer","Back-End Developer"]}
                             loop={1}
                             cursor
                             cursorStyle='_'
@@ -66,7 +66,7 @@ const Hero = () => {
 
                 </div>
                 <div>
-                    <p className="lg:w-[800px] w-[350px] text-center  lg:text-justify "> As a MERN-Stack Developer, I specialize in HTML, CSS, JavaScript, Tailwind, React, React Router, Firebase, MongoDB, Express.Js and Node.Js. I also have a passion for Swift and SwiftUI, with hands-on experience in both. My portfolio showcases my latest projects, emphasizing my design and development skills.</p>
+                    <p className="lg:w-[800px] w-[350px] text-center  lg:text-justify "> As a React Developer, I specialize in HTML, CSS, JavaScript, Tailwind, React, React Router, Firebase, MongoDB, Express.Js and Node.Js. I also have a passion for Swift and SwiftUI, with hands-on experience in both. My portfolio showcases my latest projects, emphasizing my design and development skills.</p>
                 </div>
                 <div className="  lg:ml-5 w-[150px] flex lg:hidden md:hidden ">
                         <span className=" border-b-4 text-2xl  pb-2 border-gray-500  font-bold  text-darknavy">Expertise In </span>

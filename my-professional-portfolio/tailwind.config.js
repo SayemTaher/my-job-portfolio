@@ -1,27 +1,25 @@
 module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('http://www.w3.org/2000/svg')"
+        "hero-pattern": "url('http://www.w3.org/2000/svg')",
       },
       colors: {
-        primary: '#FBFBFB', 
-        primaryTwo:'#FFFFFF',
-        primaryGray:'#E1E1E1',
-        primaryBlue:'#0073C6',
-        primaryLightBlue:'#8495B8',
-        primaryPurple : '#5E006C',
-        primaryOrange: '#FF9209',
-        primaryGreen:'#86D5AD',
-        darknavy:'#141D2C',
-        secondaryGreen: '#00ff00', 
+        primary: "#FBFBFB",
+        primaryTwo: "#FFFFFF",
+        primaryGray: "#E1E1E1",
+        primaryBlue: "#0073C6",
+        primaryLightBlue: "#8495B8",
+        primaryPurple: "#5E006C",
+        primaryOrange: "#FF9209",
+        primaryGreen: "#86D5AD",
+        darknavy: "#141D2C",
+        secondaryGreen: "#00ff00",
+        frontBlue: "#02071C",
       },
       fontFamily: {
-        'mulish': ['Mulish', 'sans-serif'],
+        mulish: ["Mulish", "sans-serif"],
       },
     },
   },
@@ -60,6 +58,6 @@ module.exports = {
       "dim",
       "nord",
       "sunset",
-    ]
-  }
-}
+    ],
+  },
+};

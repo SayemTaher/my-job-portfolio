@@ -16,7 +16,8 @@ import Education from './Components/Education/Education.jsx';
 import Certificates from './Components/Certificates/Certificates.jsx';
 import FrontEnd from './Components/Front-End/FrontEnd.jsx';
 import Work from './Components/Work-Experience/Work.jsx';
-import Mobile from './Components/Mobile-App/Mobile.jsx';
+import About from './Components/About/About.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -40,11 +41,7 @@ const router = createBrowserRouter([
         path:'/work',
         element:<Work></Work>
       },
-      {
-        path:'/mobile',
-        element:<Mobile></Mobile>
-
-      },
+      
       {
         path:'/education',
         element:<Education></Education>
@@ -52,6 +49,10 @@ const router = createBrowserRouter([
       {
         path:'/certificates',
         element:<Certificates></Certificates>
+      },
+      {
+        path: '/about',
+        element:<About></About>
       }
 
     ]

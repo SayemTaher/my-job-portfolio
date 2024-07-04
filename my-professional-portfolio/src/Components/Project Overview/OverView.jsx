@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import { GoArrowUpRight } from "react-icons/go";
 import 'animate.css';
+import CountUp from "react-countup";
 
 const OverView = () => {
     return (
         <Fade triggerOnce damping={0.5} cascade>
-            <div className="flex flex-col justify-center   mt-10 mb-10">
+            <div className="flex flex-col justify-center bg-gray-200 pl-10 pt-10  ">
                 
 
                 <div className="flex flex-col gap-2 items-center lg:items-start text-center lg:text-left" data-aos="fade-up-right">
@@ -16,22 +17,23 @@ const OverView = () => {
                     <div className="w-[250px] rounded-full h-[2px] bg-primaryBlue"></div>
                 </div>
 
-                <div className="flex mt-10  flex-col justify-center gap-20" data-aos="fade-up-left">
+                <div className="flex mt-10  flex-col justify-center gap-5 pb-10" data-aos="fade-up-left">
                     <Fade>
                         <div className="flex bg-gray-100 flex-col m-5 border-2 border-gray-100  gap-5  p-5 rounded-xl ">
                             <div className="flex justify-between  items-center ">
-                                <h1  className="animate__animated animate__bounce text-sm lg:text-xl font-bold ">Front-End Development <sup className="font-normal  bg-primaryBlue  text-white lg:p-2 p-1 rounded-full">React Based</sup></h1>
-                                <FiAirplay className=" text-3xl lg:text-6xl"></FiAirplay>
+                                <h1  className="animate__animated animate__bounce text-sm text-gray-500 lg:text-xl font-bold ">Front-End Development <sup className="font-normal  bg-primaryBlue  text-white lg:p-2 p-1 rounded-full">React Based</sup></h1>
+                                <FiAirplay className=" text-3xl lg:text-6xl text-gray-500"></FiAirplay>
 
                             </div>
                             <div className="flex flex-col justify-center items-center">
-                                <div className="stat text-gray-500 flex flex-col mt-5 lg:mt-0 justify-center shadow-xl w-[250px] bg-white border-gray-200 border-2  items-center  p-5 rounded-2xl">
+                                <div className="stat text-gray-600 flex flex-col mt-5 lg:mt-0 justify-center shadow-xl w-[250px] bg-white border-gray-200 border-2  items-center  p-5 rounded-2xl">
                                     <div className="stat-figure text-secondary">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
                                     </div>
-                                    <div className="stat-title">Projects Completed</div>
-                                    <div className="stat-value">15</div>
-                                    <div className="stat-desc">↗︎ since Jan 24</div>
+                                    <div className="stat-title text-gray-600">Projects Completed</div>
+                                    <div className="stat-value"><CountUp end={35} duration={5}>
+                                    </CountUp></div>
+                                    <div className="stat-desc text-gray-600">↗︎ since Jan 24</div>
                                 </div>
 
                                 <div className="lg:flex hidden  pb-10 pt-10">
@@ -169,8 +171,8 @@ const OverView = () => {
                         <div data-aos="fade-up-right" className=" flex-col m-5 bg-gray-100  border-2 border-gray-100  gap-5  p-5 rounded-xl ">
                             
                                 <div className="flex justify-between  items-center ">
-                                    <h1 className="lg:text-xl text-sm font-bold">App Development <sup className="font-normal bg-primaryBlue  text-white p-2 rounded-full">iOS Based</sup></h1>
-                                    <FaApple className="lg:text-6xl text-3xl "></FaApple>
+                                    <h1 className="lg:text-xl text-gray-500 text-sm font-bold">App Development <sup className="font-normal bg-primaryBlue  text-white p-2 rounded-full">iOS Based</sup></h1>
+                                    <FaApple className="lg:text-6xl text-3xl text-gray-500"></FaApple>
 
                                 </div>
                             
@@ -178,13 +180,13 @@ const OverView = () => {
 
 
                                 
-                                    <div className="stat shadow-xl text-gray-400 border-2 border-gray-200 flex flex-col justify-center lg:mt-0 mt-10 w-[250px]  items-center bg-white p-5 rounded-2xl">
+                                    <div className="stat shadow-xl text-gray-600 border-2 border-gray-200 flex flex-col justify-center lg:mt-0 mt-10 w-[250px]  items-center bg-white p-5 rounded-2xl">
                                         <div className="stat-figure text-secondary">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
                                         </div>
-                                        <div className="stat-title">Projects Completed</div>
-                                        <div className="stat-value">4</div>
-                                        <div className="stat-desc">↗︎ since March 24</div>
+                                        <div className="stat-title text-gray-600">Projects Completed</div>
+                                        <div className="stat-value"><CountUp end={5} duration={5}/></div>
+                                        <div className="stat-desc text-gray-600">↗︎ since March 24</div>
                                     </div>
                                 
                                 
