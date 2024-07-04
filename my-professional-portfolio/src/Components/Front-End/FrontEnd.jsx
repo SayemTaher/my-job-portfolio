@@ -16,7 +16,7 @@ const FrontEnd = () => {
         , [webProject])
     return (
         <Fade triggerOnce cascade damping={0.5}>
-            <div className="flex  gap-5 bg-gray-200 flex-col pl-10  pt-10 pb-20">
+            <div className="flex  gap-5 bg-gray-200 flex-col lg:pl-10 pl-0   pt-10 pb-20">
                 <div className="mb-5 lg:text-left flex flex-col lg:items-start  items-center text-center" data-aos="fade-up-right">
                 
                 <h1 className="lg:text-4xl text-3xl  font-bold  pb-4 ">Front-End Projects</h1>

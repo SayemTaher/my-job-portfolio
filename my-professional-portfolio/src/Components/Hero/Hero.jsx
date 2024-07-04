@@ -43,7 +43,7 @@ const Hero = () => {
 
             <div className="flex flex-col gap-5 mt-20 lg:mt-0 items-center justify-center " data-aos="fade-up-right">
             <div className="pb-2 text-left">
-                        <span className=" border-l-4 pl-2 border-darknavy  text-lg lg:text-2xl font-bold text-blue-700 dark:text-white ">Sayem Ibne Taher</span>
+                        <span className=" border-l-4 pl-2 border-darknavy  text-lg lg:text-2xl font-bold text-blue-600 ">Sayem Ibne Taher</span>
                     </div>
                 <div data-aos="fade-up">
                     

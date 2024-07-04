@@ -19,7 +19,7 @@ const Header = () => {
         } else if (theme === 'dark') {
             setTheme('nord');
         } else {
-            setTheme('nord');
+            setTheme('dark');
         }
     };
     

@@ -12,7 +12,7 @@ import {
 import Home from './Components/Home/Home.jsx';
 import { HelmetProvider } from 'react-helmet-async';
 import Projects from './Components/Projects/Projects.jsx';
-import Education from './Components/Education/Education.jsx';
+
 import Certificates from './Components/Certificates/Certificates.jsx';
 import FrontEnd from './Components/Front-End/FrontEnd.jsx';
 import Work from './Components/Work-Experience/Work.jsx';
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       
       {
         path:'/education',
-        element:<Education></Education>
+        element:<About></About>
       },
       {
         path:'/certificates',

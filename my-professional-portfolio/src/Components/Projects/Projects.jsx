@@ -29,7 +29,7 @@ const Projects = () => {
         </Helmet>
 
         <div
-          className="flex lg:flex-row flex-col gap-5 pl-10 pr-10 justify-between items-center    min-h-[800px] bg-frontBlue"
+          className="flex lg:flex-row flex-col gap-5 pt-24 lg:pt-0 pl-10 pr-10 pb-10 justify-between items-center    min-h-[800px] bg-frontBlue"
           data-aos="fade-up"
         >
           <div

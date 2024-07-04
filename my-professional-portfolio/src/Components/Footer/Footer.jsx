@@ -12,13 +12,18 @@ const Footer = () => {
             <a className="link link-hover">Mobile Application</a>
           </nav>
           <nav className="flex flex-col gap-2">
-            <h6 className="footer-title">Work & Experience</h6>
-            <a className="link link-hover">Hospitality</a>
-            <Link to='/about' className="link link-hover">Explore Me</Link>
+            <h6 className="footer-title">Work & Education</h6>
+            <Link to='/work' className="link link-hover">Hospitality</Link>
+            <Link to="/about" className="link link-hover">
+              Explore Me
+            </Link>
+            <Link to="/about" className="link link-hover">
+              Education
+            </Link>
           </nav>
           <nav className="flex flex-col gap-2">
             <h6 className="footer-title">Certificates</h6>
-            <a className="link link-hover">Professional</a>
+            <Link to='/certificates' className="link link-hover">Professional</Link>
           </nav>
         </div>
         <div className="w-[800px] flex flex-col justify-center items-center border-dashed   border-t-2 border-gray-300 ">

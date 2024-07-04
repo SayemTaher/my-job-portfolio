@@ -84,7 +84,7 @@ const About = () => {
                 </button>
               </Link>
 
-              <Link to="/frontEnd">
+              <Link to="/projects">
                 <button
                   title="right arrow"
                   className="p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 lg:mx-6 hover:bg-gray-100"
