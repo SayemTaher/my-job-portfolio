@@ -17,6 +17,7 @@ import Certificates from './Components/Certificates/Certificates.jsx';
 import FrontEnd from './Components/Front-End/FrontEnd.jsx';
 import Work from './Components/Work-Experience/Work.jsx';
 import About from './Components/About/About.jsx';
+import MobileDesign from './Components/UX/MobileDesign.jsx';
 
 
 const router = createBrowserRouter([
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element:<About></About>
+      },
+      {
+        path: '/mobileProjects',
+        element:<MobileDesign></MobileDesign>
       }
 
     ]

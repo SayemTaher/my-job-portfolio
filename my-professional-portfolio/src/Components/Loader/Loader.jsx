@@ -3,17 +3,9 @@ import Skeleton from "../Skeleton/Skeleton";
 
 const Loader = () => {
     return (
-        
-            
-            <div className="flex gap-5 flex-col mt-10 justify-center items-center ">
-                <Skeleton></Skeleton>
-            <div className="flex gap-2">
-            <span className="loading loading-bars loading-lg"></span>
-            <h1 className="text-4xl font-bold">Holding on . . .</h1>
-            </div>
-
-            </div>
-       
+      <div className="flex  flex-col bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100  justify-center h-screen items-center ">
+        <span className="loading loading-bars loading-lg"></span>
+      </div>
     );
 };
 

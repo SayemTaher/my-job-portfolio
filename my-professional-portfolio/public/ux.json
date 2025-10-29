@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Sleep Garden Tracker",
+    "description": "Sleep Garden Tracker is a unique sleep management application that promotes healthy sleep habits through a gamified environment. It provides insights into sleep patterns, encourages routine via virtual garden growth, and includes meditation aids for relaxation.",
+    "category": "Health & Wellness",
+    "main_image": "sleep_garden_main.jpg",
+    "prototype_images": [
+      "sleep_garden_prototype1.jpg",
+      "sleep_garden_prototype2.jpg"
+    ],
+    "artifacts_images": [
+      "sleep_garden_artifact1.jpg",
+      "sleep_garden_artifact2.jpg"
+    ],
+    "supporting_images": [
+      "sleep_garden_support1.jpg",
+      "sleep_garden_support2.jpg"
+    ],
+    "logo_image": "sleep_garden_logo.jpg",
+    "title": "Sleep Garden Tracker App"
+  },
+  {
+    "id": 2,
+    "name": "Community Connector",
+    "description": "The Community Connector App serves as a digital hub for community engagement, integrating social networking, event management, and resource sharing to foster interactions and inclusivity within community networks.",
+    "category": "Community Engagement",
+    "main_image": "community_connector_main.jpg",
+    "prototype_images": [
+      "community_connector_prototype1.jpg",
+      "community_connector_prototype2.jpg"
+    ],
+    "artifacts_images": [
+      "community_connector_artifact1.jpg",
+      "community_connector_artifact2.jpg"
+    ],
+    "supporting_images": [
+      "community_connector_support1.jpg",
+      "community_connector_support2.jpg"
+    ],
+    "logo_image": "community_connector_logo.jpg",
+    "title": "Community Connector App"
+  },
+  {
+    "id": 3,
+    "name": "Harmony Health",
+    "description": "Harmony Health is a cutting-edge iOS app designed to provide accurate health symptom evaluations and personalized recommendations using AI technology. It aims to empower users with reliable health information and accessible symptom tracking.",
+    "category": "Healthcare",
+    "main_image": "harmony_health_main.jpg",
+    "prototype_images": [
+      "harmony_health_prototype1.jpg",
+      "harmony_health_prototype2.jpg"
+    ],
+    "artifacts_images": [
+      "harmony_health_artifact1.jpg",
+      "harmony_health_artifact2.jpg"
+    ],
+    "supporting_images": [
+      "harmony_health_support1.jpg",
+      "harmony_health_support2.jpg"
+    ],
+    "logo_image": "harmony_health_logo.jpg",
+    "title": "Harmony Health App"
+  }
+]

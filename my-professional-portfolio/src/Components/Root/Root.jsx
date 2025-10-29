@@ -8,14 +8,25 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
 AOS.init({
-    // Global settings
-    offset: 100, // Adjusts the offset (in pixels) from the top/bottom of the element when the animation starts
-    duration: 800, // Duration of the animation (in milliseconds)
-    easing: 'ease', // Easing function for the animation
-    delay: 0, // Delay before the animation starts (in milliseconds)
-    once: false, // Whether the animation should only happen once
-    mirror: true, // Whether the animation should be mirrored on scroll up and scroll down
-  });
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: "aos-init", // class applied after initialization
+  animatedClassName: "aos-animate", // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: "ease", // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+});
 
 const Root = () => {
 
@@ -33,26 +44,21 @@ const Root = () => {
 
 
 
-    return isLoading? (
-        
-        <div className="overflow-hidden">
-            <Loader></Loader>
-        </div>
+    return isLoading ? (
+      <div className="overflow-hidden">
+        <Loader></Loader>
+      </div>
     ) : (
-        
-        <div className="overflow-hidden">
-            <div className="mx-auto container  scroll-smooth ">
-            <Header></Header>
-            <div className="  z-10 font-mulish ">
-                
-                <Outlet></Outlet>
-            </div>
-
-            
+      <div className="overflow-hidden flex flex-col ">
+        <div className="  scroll-smooth flex flex-col ">
+          <Header></Header>
+          <div className="  z-10 font-mulish ">
+            <Outlet></Outlet>
+          </div>
         </div>
         <Footer></Footer>
-        </div>
-    )
+      </div>
+    );
 };
 
 export default Root;
