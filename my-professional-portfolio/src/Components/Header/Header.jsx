@@ -154,7 +154,7 @@ const Header = () => {
 
           <Link
             to="https://drive.google.com/file/d/1TuLLhgjCjjtnomyeX0Jy0vzi8WJAkSHJ/view?usp=drive_link"
-            className="bg-darknavy hover:bg-primaryGreen flex gap-1 lg:gap-2 mr-14 lg:mr-0 justify-center items-center text-white  p-2 rounded-full w-[90px] text-xs  lg:w-[120px] text-center"
+            className="bg-darknavy hover:bg-primaryGreen flex gap-1 lg:gap-2  lg:mr-0 justify-center items-center text-white  p-2 rounded-full w-[90px] text-xs  lg:w-[120px] text-center"
           >
             <MdOutlineFileDownload className="text-lg"></MdOutlineFileDownload>
             <button>Resume</button>

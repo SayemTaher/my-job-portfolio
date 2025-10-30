@@ -18,10 +18,10 @@ export const ProjectHeadline = ({ header, info }) => {
       data-aos="fade-up" 
       className="bg-base-100 pt-5 pb-5 h-96 flex flex-col gap-4 justify-center items-center"
     >
-      <h1 className="text-transparent text-2xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+      <h1 className="text-transparent text-4xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
         {header}
       </h1>
-      <span className="text-xl text-center text-gray-600">{info}</span>
+      <span className="text-xl pl-5 pr-5 text-center text-gray-600">{info}</span>
     </div>
   );
 };

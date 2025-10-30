@@ -38,7 +38,7 @@ const Hero = () => {
           <div>
             <h1 className="lg:text-8xl font-bold text-center  pb-4 animate__animated animate__fadeInDown text-3xl text-darknavy">
               Designing Human-Centered <br />{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+              <span className="text-transparent text-6xl lg:text-8xl  bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
                 <Typewriter
                   words={[
                     "Digital Experiences",

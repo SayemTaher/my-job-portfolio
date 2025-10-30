@@ -8,6 +8,7 @@ import { FaFigma } from "react-icons/fa";
 import AOS from "aos";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
+import { FaStar } from "react-icons/fa6";
 // BlogCard.jsx
 export const Bosch = () => {
     useEffect(() => {
@@ -20,7 +21,10 @@ export const Bosch = () => {
       AOS.refresh();
     }, []);
   return (
-    <div data-aos="ease-in-out" className="m-4 flex flex-col lg:flex-row gap-2 rounded-xl p-4 shadow backdrop-blur-lg">
+    <div
+      data-aos="ease-in-out"
+      className="m-4 flex flex-col lg:flex-row gap-2 rounded-xl p-4 shadow backdrop-blur-lg"
+    >
       <div>
         <img
           className="object-cover w-full h-full"
@@ -33,11 +37,17 @@ export const Bosch = () => {
         <div>
           <div>
             {/* {main section} */}
-            <div className="flex w-full  items-center justify-between">
-              <span className="text-2xl lg:text-4xl  font-bold text-transparent  bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
-                Bosch Security Systems
-              </span>
-              <span className="bg-pink-50 text-[10px] w-[200px] lg:w-[250px] lg:text-sm font-semibold text-pink-500 border-2 border-pink-100 pt-2 pb-2 pl-4 pr-4 rounded-full">
+            <div className="flex flex-col lg:flex-row gap-5 lg:gap-0 w-full  items-center justify-between">
+              <div className="flex gap-2">
+                <span className="text-2xl lg:text-4xl font-bold text-purple-600">
+                  Bosch Security Systems
+                </span>
+                <div className="border-2 flex items-center gap-1 justify-center border-pink-500 py-2 px-4 text-pink-500 rounded-2xl font-bold text-xs">
+                  <FaStar className="text-xl"></FaStar> <span className="text-lg">10/10</span>
+                </div>
+              </div>
+
+              <span className="bg-pink-50 text-[16px]  w-[250px] lg:text-sm font-semibold text-pink-500 border-2 border-pink-100 pt-2 pb-2 pl-4 pr-4 rounded-full">
                 {" "}
                 February, 2025 - June, 2025
               </span>
@@ -52,7 +62,7 @@ export const Bosch = () => {
               Web Design & Development Internship
             </a>
 
-            <p className="  mt-10 text-gray-600 text-lg dark:text-gray-400">
+            <p className="  mt-10 text-gray-500 text-lg dark:text-gray-400">
               During my internship at Bosch Security Systems in Eindhoven, I
               worked as a Web Application Design & Developer Intern, focusing on
               creating a secure, full-stack web solution for internal use. The
