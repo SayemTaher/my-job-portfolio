@@ -1,77 +1,73 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { MdOutlineArrowCircleRight } from "react-icons/md";
-
-const projects = [
-  {
-    id: "quiet",
-    title: "Quiet Eindhoven",
-    desc: "iOS donation management app enabling indirect charitable contributions. Complete UX/UI design and development.",
-    img: "/quiet-eindhoven.png",
-    alt: "Quiet Eindhoven iOS donation app preview",
-    chips: ["Swift", "SwiftUI", "Figma", "iOS Design", "Prototyping"],
-    gradient: "from-orange-400/80 via-rose-400/70 to-red-500/80",
-  },
-  {
-    id: "i3connect",
-    title: "i3Connect AI Assistant",
-    desc: "Interactive AI scenarios for educational software. User research, testing, and human-centered design.",
-    img: "/ctouch.png", 
-    alt: "i3Connect virtual AI assistant interface",
-    chips: ["Figma", "Application Design", "AI Assistant", "Prototyping"],
-    gradient: "from-emerald-400/80 via-teal-400/70 to-blue-500/80",
-  },
-];
+import { clientProjects } from "../../data/clientProjects";
 
 function Chip({ children }) {
   return (
-    <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-purple-50 text-purple-700 dark:bg-white/10 dark:text-purple-200">
+    <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-300 border border-blue-400/30">
       {children}
     </span>
   );
 }
 
-function ProjectCard({ title, desc, img, alt, chips, gradient }) {
+function ProjectCard({ id, title, desc, img, alt, chips, gradient }) {
   return (
-    <article
-      data-aos="fade-up"
-      className="group overflow-hidden rounded-2xl bg-white dark:bg-gray-900 shadow-md ring-1 ring-black/5 dark:ring-white/10 transition hover:shadow-xl"
-    >
-      {/* Media */}
-      <div className="relative">
-        <div className="aspect-[16/10] w-full overflow-hidden">
-          <img
-            src={img}
-            alt={alt}
-            loading="lazy"
-            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+    <Link to={`/client-project/${id}`}>
+      <article
+        data-aos="fade-up"
+        className="group overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800/60 to-navy-800/60 backdrop-blur-sm border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:scale-105 hover:shadow-blue-500/20 cursor-pointer"
+      >
+        {/* Media */}
+        <div className="relative overflow-hidden">
+          <div className=" w-full overflow-hidden">
+            {img ? (
+              <img
+                src={img}
+                alt={alt}
+                loading="lazy"
+                className="h-[400px] w-full object-cover transition duration-700 group-hover:scale-110"
+              />
+            ) : (
+              <div className={`h-[400px] w-full bg-gradient-to-br ${gradient} flex items-center justify-center`}>
+                <span className="text-white text-xl font-bold text-center px-4">{title}</span>
+              </div>
+            )}
+          </div>
+          {/* Gradient overlay on hover */}
+          <div
+            className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-300`}
           />
         </div>
-        {/* Gradient veil for readability */}
-        <div
-          className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-100 transition`}
-        />
-      </div>
 
-      {/* Content */}
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-          {title}
-        </h3>
-        <p className="mt-2 text-sm lg:text-base text-slate-600 dark:text-slate-300">
-          {desc}
-        </p>
+        {/* Content */}
+        <div className="p-6">
+          <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors mb-3">
+            {title}
+          </h3>
+          <p className="mt-2 text-sm lg:text-base text-blue-200/80 mb-4">
+            {desc}
+          </p>
 
-        {/* Chips */}
-        <div className="mt-4 flex flex-wrap gap-2">
-          {chips.map((c) => (
-            <Chip key={c}>{c}</Chip>
-          ))}
+          {/* Chips */}
+          <div className="mt-4 flex flex-wrap gap-2">
+            {chips.map((c) => (
+              <Chip key={c}>{c}</Chip>
+            ))}
+          </div>
+
+          {/* View Project Link */}
+          <div className="flex items-center text-blue-400 group-hover:text-cyan-400 transition-colors font-semibold mt-4">
+            <span>View Project</span>
+            <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </Link>
   );
 }
 
@@ -86,25 +82,34 @@ export const ClientProject = () => {
   }, []);
 
   return (
-    <section className="w-full bg-purple-50 dark:bg-gray-950">
-      <div className="mx-auto max-w-7xl px-4 py-12">
-        
+    <section className="w-full py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      
 
         {/* Grid */}
-        <div className="grid gap-6 md:grid-cols-2">
-          {projects.map((p) => (
-            <ProjectCard key={p.id} {...p} />
+        <div className="grid gap-8 md:grid-cols-2 mb-12">
+          {clientProjects.map((p) => (
+            <ProjectCard
+              key={p.id}
+              id={p.id}
+              title={p.title}
+              desc={p.description}
+              img={p.img}
+              alt={p.alt}
+              chips={p.chips}
+              gradient={p.gradient}
+            />
           ))}
         </div>
 
         {/* CTA */}
-        <div className="mt-10 flex justify-center">
+        <div className="flex justify-center" data-aos="fade-up">
           <NavLink
-            to="/projects"
-            className="inline-flex items-center gap-2 rounded-full  bg-white px-5 py-3 text-purple-600 shadow-lg shadow-white border-2 border-purple-200 backdrop-blur-md transition hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
+            to="/mobileProjects"
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 font-semibold shadow-xl hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:scale-105 border border-blue-400/30"
           >
             <MdOutlineArrowCircleRight className="text-xl" />
-            <span className="font-semibold">View All Projects</span>
+            <span>View All UX/UI Projects</span>
           </NavLink>
         </div>
       </div>

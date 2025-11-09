@@ -49,12 +49,10 @@ const Root = () => {
         <Loader></Loader>
       </div>
     ) : (
-      <div className="overflow-hidden flex flex-col ">
-        <div className="  scroll-smooth flex flex-col ">
-          <Header></Header>
-          <div className="  z-10 font-mulish ">
-            <Outlet></Outlet>
-          </div>
+      <div className="overflow-hidden flex flex-col scroll-smooth">
+        <Header></Header>
+        <div className="pt-20 z-10 font-mulish">
+          <Outlet></Outlet>
         </div>
         <Footer></Footer>
       </div>

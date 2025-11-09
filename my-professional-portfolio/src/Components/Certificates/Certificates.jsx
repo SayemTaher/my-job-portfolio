@@ -1,227 +1,148 @@
-import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import HeroSection from "../HeroSection/HeroSection";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { FaAward, FaGraduationCap, FaGlobe } from "react-icons/fa";
 
 const Certificates = () => {
-  return (
-    <div
-      className="mx-auto flex flex-col container  pt-20 pb-20"
-      data-aos="fade-in"
-    >
-      <Helmet>
-        <title>Portfolio | Certification</title>
-      </Helmet>
-      <section class="bg-white ">
-        <div class="container px-6 py-10 mx-auto">
-          <div class="text-center">
-            <h1 class="text-2xl font-bold  text-blue-950 capitalize lg:text-4xl ">
-              Professional Courses & International Events Certification
-            </h1>
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-out-quart",
+      once: true,
+      offset: 100,
+    });
+  }, []);
 
-            <p class="max-w-lg mx-auto mt-4 text-gray-700">
-              Below, I have highlighted the professional courses I have
-              completed, which have significantly strengthened my personal
-              skills, along with the international events I have participated
-              in.
+  const features = [
+    {
+      icon: <FaGraduationCap className="text-cyan-400 mx-auto" />,
+      title: "Professional Courses",
+      description: "Comprehensive learning programs"
+    },
+    {
+      icon: <FaAward className="text-emerald-400 mx-auto" />,
+      title: "Certifications",
+      description: "Recognized achievements"
+    },
+    {
+      icon: <FaGlobe className="text-teal-400 mx-auto" />,
+      title: "International Events",
+      description: "Global participation"
+    }
+  ];
+
+  const certificates = [
+    {
+      id: 1,
+      title: "Complete Web Development",
+      provider: "Programming Hero",
+      providerLogo: "https://i.ibb.co/VvGYkhk/ph.jpg",
+      providerUrl: "https://www.programming-hero.com",
+      image: "https://i.ibb.co/6ZWMrbx/Screenshot-2024-07-03-at-00-13-18.png",
+      description: "This course has equipped me with extensive hands-on experience, laying a solid foundation for my career as a Junior Web Developer. I have become proficient in front-end and back-end development, authentication, authorization, and database management."
+    },
+    {
+      id: 2,
+      title: "Responsive Web Design",
+      provider: "FreeCodeCamp",
+      providerLogo: "https://i.ibb.co/HVh0ByR/free-code-camp.png",
+      providerUrl: "https://www.freecodecamp.org/learn",
+      image: "https://i.ibb.co/JdvNq4D/Screenshot-2024-07-04-at-22-24-21.png",
+      description: "This course provides hands-on experience while working through projects to provide learners a complete strong understanding of designing web applications using HTML and CSS. The main purpose is to provide a complete understanding of responsive web development."
+    },
+    {
+      id: 3,
+      title: "Sustainability and Green UX in Multimedia and IT",
+      provider: "IBA, Kolding, Denmark",
+      providerLogo: "https://i.ibb.co/s1CMLrR/iba-kolding.png",
+      providerUrl: "https://busitweeks.wordpress.com/international-business-academy-kolding/",
+      image: "https://i.ibb.co/DrfcbMj/1711407683311.jpg",
+      description: "I worked actively as part of a multicultural team, on projects requiring problem-solving skills with an academic but nevertheless practical mindset. Of crucial importance over the various weeks were time management, cross-cultural communication and team spirit."
+    }
+  ];
+
+  return (
+    <div className="mx-auto flex flex-col bg-gradient-to-br from-slate-900 via-navy-900 to-indigo-900">
+      <Helmet>
+        <title>Portfolio | Certifications</title>
+      </Helmet>
+      
+      <HeroSection
+        title="Certifications & Achievements"
+        subtitle="Professional Growth & Learning"
+        description="Highlighting the professional courses and international events that have shaped my expertise and contributed to my professional development"
+        gradient="from-slate-900 via-navy-900 to-indigo-900"
+        features={features}
+      />
+      
+      <section className="bg-gradient-to-br from-indigo-900 via-navy-900 to-slate-900 py-20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0)`,
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16" data-aos="fade-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Professional Courses & International Events
+            </h2>
+            <p className="text-xl text-blue-200 max-w-2xl mx-auto">
+              Certifications and achievements that demonstrate my commitment to continuous learning
             </p>
           </div>
 
-          <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {certificates.map((cert, index) => (
               <div
-                class="relative shadow-md border-2 border-gray-400"
-                data-aos="fade-right"
-              >
-                <img
-                  class="object-cover object-top w-full h-64  lg:h-80"
-                  src="https://i.ibb.co/6ZWMrbx/Screenshot-2024-07-03-at-00-13-18.png"
-                  alt=""
-                />
-
-                <div class="absolute bottom-0  shadow-lg flex p-3 bg-white  ">
-                  <img
-                    class="object-cover object-center w-10 h-10 rounded-full"
-                    src="https://i.ibb.co/VvGYkhk/ph.jpg"
-                    alt=""
-                  />
-
-                  <div class="mx-4">
-                    <h1 class="text-sm text-gray-700 ">
-                      Programming Hero
-                    </h1>
-                    <a
-                      href="https://www.programming-hero.com"
-                      class="text-sm text-blue-500"
-                    >
-                      www.programming-hero.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <h1 class="mt-6 text-xl font-semibold text-blue-600 ">
-                Complete Web Development
-              </h1>
-
-              <hr class="w-32 my-6 text-blue-500" />
-
-              <p class="text-sm text-gray-500 ">
-                This course has equipped me with extensive hands-on experience,
-                laying a solid foundation for my career as a Junior Web
-                Developer. I have become proficient in front-end and back-end
-                development, authentication, authorization, and database
-                management. Six months of continuous practice, classes, and
-                assignments have given me the confidence to present myself as a
-                skilled Web Developer. I am excited to apply my skills and
-                continually push myself to new heights.
-              </p>
-            </div>
-
-            <div>
-              <div
-                class="relative shadow-md border-2 border-gray-400"
+                key={cert.id}
+                className="bg-gradient-to-br from-slate-800/60 to-navy-800/60 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-blue-500/20 hover:border-blue-400/40"
                 data-aos="fade-up"
+                data-aos-delay={index * 100}
               >
-                <img
-                  class="object-cover object-top w-full h-64 lg:h-80"
-                  src="https://i.ibb.co/JdvNq4D/Screenshot-2024-07-04-at-22-24-21.png"
-                  alt=""
-                />
-
-                <div class="absolute bottom-0 shadow-lg flex p-3 bg-white  ">
+                {/* Image */}
+                <div className="relative h-64 overflow-hidden">
                   <img
-                    class="object-cover object-center w-10 h-10 rounded-full"
-                    src="https://i.ibb.co/HVh0ByR/free-code-camp.png"
-                    alt=""
+                    src={cert.image}
+                    alt={cert.title}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                   />
-
-                  <div class="mx-4">
-                    <h1 class="text-sm text-gray-700 ">
-                      FreeCodeCamp
-                    </h1>
-                    <a
-                      href="https://www.freecodecamp.org/learn"
-                      class="text-sm text-blue-500"
-                    >
-                      www.freecodecamp.org
-                    </a>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/80 to-transparent p-4">
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={cert.providerLogo}
+                        alt={cert.provider}
+                        className="w-10 h-10 rounded-full object-cover border-2 border-white/20"
+                      />
+                      <div>
+                        <h3 className="text-white font-semibold text-sm">{cert.provider}</h3>
+                        <a
+                          href={cert.providerUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-300 text-xs hover:text-cyan-400 transition-colors"
+                        >
+                          Visit Website
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <h1 class="mt-6 text-xl font-semibold text-blue-600 ">
-                Responsive Web Design
-              </h1>
-
-              <hr class="w-32 my-6 text-blue-500" />
-
-              <p class="text-sm text-gray-500 ">
-                This code provides hands on experience while working through
-                projects to provide learners a complete strong understanding of
-                designing web applications using HTML and CSS. The main purpose
-                is to provide a complete understanding of responsive web
-                development.
-              </p>
-            </div>
-
-            <div>
-              <div
-                class="relative border-2 shadow-md border-gray-400"
-                data-aos="fade-right"
-              >
-                <img
-                  class="object-cover  object-top w-full h-64  lg:h-80"
-                  src="https://i.ibb.co/DrfcbMj/1711407683311.jpg"
-                  alt=""
-                />
-
-                <div class="absolute bottom-0 shadow-lg flex p-3 bg-white  ">
-                  <img
-                    class="object-cover object-center w-10 h-10 rounded-full"
-                    src="https://i.ibb.co/s1CMLrR/iba-kolding.png"
-                    alt=""
-                  />
-
-                  <div class="mx-4">
-                    <h1 class="text-sm text-gray-700 ">
-                      IBA, Kolding, Denmark
-                    </h1>
-                    <a
-                      className="text-sm text-blue-500"
-                      href="https://busitweeks.wordpress.com/international-business-academy-kolding/"
-                    >
-                      www.iba.dk
-                    </a>
-                  </div>
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-3">{cert.title}</h3>
+                  <p className="text-blue-200/80 text-sm leading-relaxed line-clamp-4">
+                    {cert.description}
+                  </p>
                 </div>
               </div>
-
-              <h1 class="mt-6 text-xl font-semibold text-blue-600 ">
-                Sustainability and Green UX in Multimedia and IT
-              </h1>
-
-              <hr class="w-32 my-6 text-blue-500" />
-
-              <p class="text-sm text-gray-500 ">
-                I worked actively as part of a multicultural team, on projects
-                requiring problem-solving skills with an academic but
-                nevertheless practical mindset. Of crucial importance over the
-                various weeks were time management, cross-cultural communication
-                and team spirit. These successfully completed projects increase
-                skillsets, in terms of international competencies and
-                intercultural communication, providing valuable insight into
-                multicultural workplaces, bringing the students into closer
-                contact with a global mindset, and making them more attractive
-                in terms of global employability.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
-      <div className="flex items-center mb-6 justify-between mt-12 lg:justify-start">
-        <Link to="/">
-          <button
-            title="left arrow"
-            className="p-2 text-gray-800 transition-colors duration-300 bg-white border rounded-full rtl:-scale-x-100 dark:border-gray-700  dark:hover:bg-gray-800 hover:bg-gray-100"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-        </Link>
-
-        <Link to="/projects">
-          <button
-            title="right arrow"
-            className="p-2 text-gray-800 transition-colors bg-white duration-300 border rounded-full rtl:-scale-x-100 dark:border-gray-700  dark:hover:bg-gray-800 lg:mx-6 hover:bg-gray-100"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
-        </Link>
-      </div>
     </div>
   );
 };

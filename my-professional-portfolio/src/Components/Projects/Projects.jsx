@@ -1,130 +1,122 @@
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import { SiMongodb, SiFirebase, SiTailwindcss, SiExpress } from "react-icons/si";
+import { IoLogoJavascript } from "react-icons/io";
 import { ImHtmlFive } from "react-icons/im";
 import { SiCss3 } from "react-icons/si";
-import { IoLogoJavascript } from "react-icons/io";
-import { SiTailwindcss } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-import { SiFirebase } from "react-icons/si";
-import { SiMongodb } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa6";
 import { Fade } from "react-awesome-reveal";
 import FrontEnd from "../Front-End/FrontEnd";
+import PersonalProjects from "../Project Overview/PersonalProjects";
 import { Helmet } from "react-helmet-async";
-import { Typewriter } from "react-simple-typewriter";
+import HeroSection from "../HeroSection/HeroSection";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "animate.css";
 
 const Projects = () => {
-  const handleType = (count) => {
-    console.log(count); // This logs the current word count
-  };
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-out-quart",
+      once: true,
+      offset: 100,
+    });
+  }, []);
 
-  const handleDone = () => {
-    console.log(`Done typing!`);
-  };
+  const features = [
+    {
+      icon: <FaReact className="text-blue-400 mx-auto" />,
+      title: "React",
+      description: "Modern UI development"
+    },
+    {
+      icon: <FaNodeJs className="text-cyan-400 mx-auto" />,
+      title: "Node.js",
+      description: "Server-side development"
+    },
+    {
+      icon: <SiMongodb className="text-blue-300 mx-auto" />,
+      title: "MongoDB",
+      description: "Database management"
+    }
+  ];
 
   return (
-    <Fade triggerOnce damping={0.3} cascade>
-      <div className="mx-auto flex flex-col  container ">
-        <Helmet>
-          <title>Portfolio | Front-End</title>
-        </Helmet>
+    <div className="mx-auto flex flex-col bg-gradient-to-br from-slate-900 via-navy-900 to-indigo-900">
+      <Helmet>
+        <title>Portfolio | Web Development Projects</title>
+      </Helmet>
 
-        <div
-          className="flex lg:flex-row flex-col gap-5 pt-24 lg:pt-0 pl-10 pr-10 pb-10 justify-between items-center    min-h-[800px] bg-frontBlue"
-          data-aos="fade-up"
-        >
-          <div
-            className="flex flex-col gap-2   justify-center  lg:text-left"
-            data-aos="fade-in"
-          >
-            <div
-              data-aos="fade-in-right"
-              className=" flex flex-col  gap-5 pb-5"
-            >
-              <h1 className=" lg:text-6xl text-gray-100 text-4xl  animate__animated animate__backInDown font-bold">
-                <Typewriter
-                  words={["Front-End Development", "Back-End Development"]}
-                  loop={1}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
-                  onLoopDone={handleDone}
-                  onType={handleType}
-                />
-              </h1>
-              <div className="h-[4px] rounded-full w-[300px] bg-primaryBlue"></div>
-            </div>
+      {/* Hero Section - Full Screen Height */}
+      <HeroSection
+        title="Web Development"
+        subtitle="Building Modern Digital Solutions"
+        description="Showcasing my expertise in full-stack development using cutting-edge technologies and best practices. I have completed 15+ projects using JS, React, React Router, MongoDB, Node.js, Express.js and Firebase authentication."
+        gradient="from-slate-900 via-navy-900 to-indigo-900"
+        features={features}
+      />
 
-            <div className="lg:max-w-[800px] max-w-[430px]">
-              <p className="text-gray-400 text-sm">
-                For the past two years, Ive been dedicated to my growth as a web
-                developer.{" "}
-                <b>
-                  {" "}
-                  I have completed 15+ projects using JS, React, React
-                  Router,MongoDB, Node.Js, Express.Js and Firebase
-                  authentication, while gaining proficiency in HTML, CSS, and
-                  Tailwind{" "}
-                </b>
-                . I am currently building modern websites with Node.js and
-                MongoDB. My ultimate goal is to become a skilled Full Stack
-                Developer who creates impactful products.
-              </p>
-            </div>
-
-            <div className="flex gap-5  flex-wrap pt-10 lg:text-2xl text-lg">
-              <Fade>
-                <div className="bg-gray-100 p-5 rounded-full text-center shadow-md">
-                  <FaNodeJs className="text-green-500"></FaNodeJs>
-                </div>
-              </Fade>
-              <Fade>
-                <div className="bg-gray-100 p-5 rounded-full text-center shadow-md">
-                  <FaReact className="text-blue-400"></FaReact>
-                </div>
-              </Fade>
-              <Fade>
-                <div className="bg-gray-100 p-5 rounded-full text-center shadow-md">
-                  <ImHtmlFive className="text-orange-400"></ImHtmlFive>
-                </div>
-              </Fade>
-              <Fade>
-                <div className="bg-gray-100 p-5 rounded-full text-center shadow-md">
-                  <IoLogoJavascript className="text-yellow-400"></IoLogoJavascript>
-                </div>
-              </Fade>
-              <Fade>
-                <div className="bg-gray-100 p-5 rounded-full text-center shadow-md">
-                  <SiCss3 className="text-blue-600"></SiCss3>
-                </div>
-              </Fade>
-              <Fade>
-                <div className="bg-gray-100 p-5 rounded-full text-center shadow-md">
-                  <SiTailwindcss className="text-blue-400"></SiTailwindcss>
-                </div>
-              </Fade>
-              <Fade>
-                <div className="bg-gray-100 p-5 rounded-full text-center shadow-md">
-                  <SiFirebase className="text-orange-500"></SiFirebase>
-                </div>
-              </Fade>
-              <Fade>
-                <div className="bg-gray-100 p-5 rounded-full text-center shadow-md">
-                  <SiMongodb className="text-green-500"></SiMongodb>
-                </div>
-              </Fade>
-            </div>
+      {/* Technologies Section */}
+      <section className="py-20 bg-gradient-to-br from-indigo-900 via-navy-900 to-slate-900 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0)`,
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16" data-aos="fade-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Technologies I Work With
+            </h2>
+            <p className="text-xl text-blue-200 max-w-2xl mx-auto">
+              A comprehensive toolkit for building modern web applications
+            </p>
           </div>
-          <div>
-            <img src="https://i.ibb.co/Kr793Tn/deviceframes-3.png" className="w-[600px]" alt="" />
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-6 max-w-6xl mx-auto">
+            {[
+              { icon: <ImHtmlFive className="text-5xl text-orange-500" />, name: "HTML5" },
+              { icon: <SiCss3 className="text-5xl text-blue-600" />, name: "CSS3" },
+              { icon: <IoLogoJavascript className="text-5xl text-yellow-400" />, name: "JavaScript" },
+              { icon: <FaReact className="text-5xl text-blue-400" />, name: "React" },
+              { icon: <SiTailwindcss className="text-5xl text-cyan-500" />, name: "Tailwind" },
+              { icon: <FaNodeJs className="text-5xl text-cyan-400" />, name: "Node.js" },
+              { icon: <SiExpress className="text-5xl text-gray-300" />, name: "Express" },
+              { icon: <SiMongodb className="text-5xl text-blue-300" />, name: "MongoDB" },
+              { icon: <SiFirebase className="text-5xl text-orange-500" />, name: "Firebase" }
+            ].map((tech, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center p-6 bg-gradient-to-br from-slate-800/50 to-navy-800/50 backdrop-blur-sm rounded-2xl border border-blue-500/20 hover:border-blue-400/40 hover:scale-110 transition-all duration-300 cursor-pointer group"
+                data-aos="fade-up"
+                data-aos-delay={index * 50}
+              >
+                <div className="mb-3 group-hover:scale-125 transition-transform duration-300">
+                  {tech.icon}
+                </div>
+                <span className="text-sm font-semibold text-blue-200">{tech.name}</span>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-      <div>
-        <FrontEnd></FrontEnd>
-      </div>
-    </Fade>
+      </section>
+
+      {/* Front-End Projects Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-navy-900 to-indigo-900 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0)`,
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <FrontEnd />
+        </div>
+      </section>
+
+      
+    </div>
   );
 };
 

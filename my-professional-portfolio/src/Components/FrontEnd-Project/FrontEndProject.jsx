@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
-// import { Fade } from "react-awesome-reveal";
 import { FaCode, FaGlobeAfrica } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const FrontEndProject = ({ project }) => {
   const {
@@ -14,15 +12,16 @@ const FrontEndProject = ({ project }) => {
     type,
     website_link,
   } = project;
+  
   return (
-    <div className="flex  mockup-window container mx-auto lg:m-0 lg:flex-row bg-gray-100  shadow-md gap-10 justify-center items-center rounded-xl w-[360px]  lg:w-[1170px]">
+    <div className="flex mockup-window container mx-auto lg:m-0 lg:flex-row bg-gradient-to-br from-slate-800/60 to-navy-800/60 backdrop-blur-sm shadow-lg hover:shadow-2xl gap-10 justify-center items-center rounded-2xl w-[360px] lg:w-[1170px] transition-all duration-300 hover:-translate-y-2 border border-blue-500/20 hover:border-blue-400/40">
       <div
-        className=" mt-5  flex lg:justify-between lg:items-start justify-center items-center lg:flex-row flex-col gap-5"
+        className="mt-5 flex lg:justify-between lg:items-start justify-center items-center lg:flex-row flex-col gap-5"
         data-aos="fade-up"
       >
         <div className="m-5">
           <img
-            className="lg:h-[400px] animate__animated animate__backInLeft  object-cover lg:w-[600px]  shadow-xl lg:shadow-sm rounded-xl lg:rounded-2xl "
+            className="lg:h-[400px] animate__animated animate__backInLeft object-cover lg:w-[600px] shadow-xl lg:shadow-sm rounded-xl lg:rounded-2xl"
             src={image}
             alt={`img of ${id}`}
           />
@@ -30,16 +29,16 @@ const FrontEndProject = ({ project }) => {
 
         <div className="flex flex-col justify-center items-center p-5 text-center lg:text-left lg:justify-start lg:items-start gap-5">
           <div>
-            <h1 className="lg:text-2xl text-lg pt-5 lg:pt-0 text-gray-500  pb-5 font-bold">
+            <h1 className="lg:text-2xl text-lg pt-5 lg:pt-0 text-white pb-5 font-bold">
               {title}{" "}
-              <sup className="bg-primaryBlue text-xs text-white p-2 text-center rounded-full">
+              <sup className="bg-gradient-to-r from-blue-600 to-cyan-600 text-xs text-white p-2 text-center rounded-full">
                 {type}
               </sup>
             </h1>
-            <div className="flex gap-2 max-w-[400px]  flex-wrap text-center  items-center">
+            <div className="flex gap-2 max-w-[400px] flex-wrap text-center items-center">
               {technology.map((techno, idx) => (
                 <span
-                  className="bg-blue-100 text-blue-600 p-1 text-center lg:w-[120px] w-[90px] text-xs  rounded-full"
+                  className="bg-blue-500/20 text-blue-300 p-1 text-center lg:w-[120px] w-[90px] text-xs rounded-full border border-blue-400/30"
                   key={idx}
                 >
                   {techno}
@@ -48,19 +47,27 @@ const FrontEndProject = ({ project }) => {
             </div>
           </div>
 
-          <p className="text-gray-500 max-w-[450px]">{description}</p>
+          <p className="text-blue-200/80 max-w-[450px]">{description}</p>
 
-          <div className=" flex  gap-4    items-center rounded-full">
-            <div className="flex bg-blue-950 p-2 rounded-full text-white hover:scale-95 items-center gap-2">
+          <div className="flex gap-4 items-center">
+            <a
+              href={website_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-full text-white hover:scale-105 items-center gap-2 transition-transform duration-300 shadow-lg hover:shadow-xl border border-blue-400/30"
+            >
               <FaGlobeAfrica></FaGlobeAfrica>
-              <Link to={website_link}>
-                <button>Visit Now</button>
-              </Link>
-            </div>
-            <div className="flex gap-2 bg-gray-800 text-white p-2 rounded-full hover:scale-95 items-center">
+              <button>Visit Now</button>
+            </a>
+            <a
+              href={gitHub}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-2 bg-gradient-to-r from-slate-700 to-slate-800 text-white p-3 rounded-full hover:scale-105 items-center transition-transform duration-300 shadow-lg hover:shadow-xl border border-slate-600/30"
+            >
               <FaCode />
-              <Link to={gitHub}>View Code</Link>
-            </div>
+              <span>View Code</span>
+            </a>
           </div>
         </div>
       </div>

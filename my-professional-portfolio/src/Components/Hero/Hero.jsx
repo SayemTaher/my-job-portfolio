@@ -1,50 +1,64 @@
-import { FaDatabase } from "react-icons/fa6";
-import AOS from "aos";
-import "animate.css";
-import "aos/dist/aos.css";
-import { FaCode } from "react-icons/fa";
-import { Typewriter } from "react-simple-typewriter";
+import { FaCode, FaDatabase } from "react-icons/fa";
 import { MdDesignServices } from "react-icons/md";
 import { FaLocationCrosshairs } from "react-icons/fa6";
-import { FaArrowDownLong } from "react-icons/fa6";
-AOS.init({
-  // Global settings
-  offset: 100, // Adjusts the offset (in pixels) from the top/bottom of the element when the animation starts
-  duration: 800, // Duration of the animation (in milliseconds)
-  easing: "ease", // Easing function for the animation
-  delay: 0, // Delay before the animation starts (in milliseconds)
-  once: false, // Whether the animation should only happen once
-  mirror: true, // Whether the animation should be mirrored on scroll up and scroll down
-});
-
+import { Typewriter } from "react-simple-typewriter";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "animate.css";
 import "./hero.css";
 
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out-quart",
+      once: true,
+    });
+  }, []);
+
+  const features = [
+    {
+      icon: <FaCode className="text-4xl" />,
+      title: "Fast",
+      description: "High-performance development"
+    },
+    {
+      icon: <MdDesignServices className="text-4xl" />,
+      title: "Reliable",
+      description: "Consistent quality delivery"
+    },
+    {
+      icon: <FaDatabase className="text-4xl" />,
+      title: "Safe",
+      description: "Secure and scalable solutions"
+    }
+  ];
+
   return (
-    <div
-      className="flex flex-col items-center bg-gradient-to-r from-blue-100 to-pink-100  justify-center bg-no-repeat  min-h-screen    font-mulish"
-      data-aos="fade-up-right"
-    >
-      <div
-        className="flex flex-col gap-5 mt-20 lg:mt-0 items-center justify-center "
-        data-aos="fade-up-right"
-      >
-        {/* <div className="pb-2 text-left">
-            <span className=" border-l-4 pl-2 border-darknavy  text-lg lg:text-2xl font-bold text-blue-600 ">
-              Sayem Ibne Taher
-            </span>
-          </div> */}
-        <div data-aos="fade-up">
-          <div>
-            <h1 className="lg:text-8xl font-bold text-center  pb-4 animate__animated animate__fadeInDown text-3xl text-darknavy">
-              Designing Human-Centered <br />{" "}
-              <span className="text-transparent text-6xl lg:text-8xl  bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-navy-900 to-indigo-900 min-h-screen flex items-center justify-center">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-400/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 opacity-5" style={{
+        backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+        backgroundSize: '50px 50px'
+      }}></div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
+        <div className=" mx-auto text-center" data-aos="fade-up">
+          <div className="flex flex-col items-center justify-center gap-4">
+            <h1 className=" text-4xl md:text-7xl lg:text-8xl font-bold text-white  leading-tight">
+            Designing Human-Centered
+          </h1>
+           <span className="bg-gradient-to-r mb-4 text-6xl md:text-5xl lg:text-9xl font-bold from-blue-400 via-cyan-400 to-blue-300 bg-clip-text text-transparent">
                 <Typewriter
-                  words={[
-                    "Digital Experiences",
-                    "Solutions",
-                    "Digital Innovations",
-                  ]}
+                  words={["Experiences", "Solutions", "Innovations"]}
                   loop={false}
                   cursor
                   cursorStyle="|"
@@ -53,46 +67,43 @@ const Hero = () => {
                   delaySpeed={1000}
                 />
               </span>
-            </h1>
-          </div>
-        </div>
-        <div>
-          <p className="lg:w-[800px] w-[350px] text-sm lg:text-2xl text-gray-600 text-center  lg:text-center ">
-            {" "}
-            Blending creativity and technology to craft meaningful digital
-            solutions that connect users with innovation
+          
+          <p className="text-xl sm:text-2xl md:text-3xl text-blue-200 mb-6 max-w-6xl text-center leading-relaxed">
+            Blending creativity and technology to translate ideas into meaningful digital solutions that connect users with innovation
           </p>
-        </div>
-        {/* <div className="  lg:ml-5 w-[150px] flex lg:hidden md:hidden ">
-            <span className=" border-b-4 text-2xl  pb-2 border-gray-500  font-bold  text-darknavy">
-              Expertise In{" "}
-            </span>
-          </div> */}
-        <div className="flex items-center flex-wrap justify-center pt-6 gap-4 ">
-          <div className="bg-white   shadow-sm lg:shadow-none rounded-full pt-4 pb-4 pr-4 pl-4 text-md text-center flex gap-2  items-center justify-center">
-            <FaCode className="text-purple-500 text-2xl -mt-14"></FaCode>
-            <span className=" -ml-6 font-semibold text-pink-500">
-              Front-End Development
-            </span>
           </div>
-          <div className="bg-white  shadow-sm lg:shadow-md shadow-purple-200 pt-4 pb-4 pr-4 pl-4  rounded-full lg:pt-6 lg:pb-6 lg:pr-4 lg:pl-4 text-md text-center flex gap-2  items-center justify-center">
-            <MdDesignServices className="text-purple-500  text-2xl -mt-[58px] lg:-mt-[70px]" />
 
-            <span className=" -ml-8 font-semibold  text-pink-500">
-              UX/UI Design
-            </span>
+          
+
+          {/* Expertise Tags */}
+          <div className="flex items-center flex-wrap justify-center pt-12 gap-4" data-aos="fade-up" data-aos-delay="300">
+            <div className="bg-blue-500/20 backdrop-blur-md shadow-lg rounded-full px-6 py-3 text-center flex gap-2 items-center justify-center hover:bg-blue-500/30 transition-all duration-300 border border-blue-400/30">
+              <FaCode className="text-white text-xl" />
+              <span className="font-semibold text-white">Front-End Development</span>
+            </div>
+            <div className="bg-blue-500/20 backdrop-blur-md shadow-lg rounded-full px-6 py-3 text-center flex gap-2 items-center justify-center hover:bg-blue-500/30 transition-all duration-300 border border-blue-400/30">
+              <MdDesignServices className="text-white text-xl" />
+              <span className="font-semibold text-white">UX/UI Design</span>
+            </div>
+            <div className="bg-blue-500/20 backdrop-blur-md shadow-lg rounded-full px-6 py-3 text-center flex gap-2 items-center justify-center hover:bg-blue-500/30 transition-all duration-300 border border-blue-400/30">
+              <FaDatabase className="text-white text-xl" />
+              <span className="font-semibold text-white">Back-End Development</span>
+            </div>
           </div>
-          <div className="bg-white shadow-sm lg:shadow-none font-semibold  rounded-full pt-4 pb-4 pr-4 pl-4 text-md text-center flex gap-2  items-center justify-center">
-            <FaDatabase className="text-purple-500  text-2xl -mt-14"></FaDatabase>
-            <span className=" -ml-6 text-pink-500">
-              Back-End Development
-            </span>
+
+          {/* Location */}
+          <div className="flex items-center justify-center mt-8 text-blue-200" data-aos="fade-up" data-aos-delay="400">
+            <FaLocationCrosshairs className="mr-2" />
+            <span>Eindhoven, The Netherlands</span>
           </div>
         </div>
       </div>
-      <div className="flex mt-5   text-sm font-bold  rounded-full p-2  gap-2 justify-center items-center">
-        <FaLocationCrosshairs className="text-gray-600"></FaLocationCrosshairs>
-        <span className="text-gray-600"> Eindhoven, The Netherlands</span>
+
+      {/* Smooth scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg className="w-6 h-6 text-blue-300/60" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
       </div>
     </div>
   );

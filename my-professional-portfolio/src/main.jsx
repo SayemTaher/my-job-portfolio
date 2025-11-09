@@ -18,6 +18,7 @@ import FrontEnd from './Components/Front-End/FrontEnd.jsx';
 import Work from './Components/Work-Experience/Work.jsx';
 import About from './Components/About/About.jsx';
 import MobileDesign from './Components/UX/MobileDesign.jsx';
+import ClientProjectDetail from './Components/ClientProjectDetail/ClientProjectDetail.jsx';
 
 
 const router = createBrowserRouter([
@@ -58,6 +59,14 @@ const router = createBrowserRouter([
       {
         path: '/mobileProjects',
         element:<MobileDesign></MobileDesign>
+      },
+      {
+        path: '/ux-ui',
+        element:<MobileDesign></MobileDesign>
+      },
+      {
+        path: '/client-project/:id',
+        element:<ClientProjectDetail></ClientProjectDetail>
       }
 
     ]

@@ -51,18 +51,18 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-gray-100">
-      <section className="bg-white">
+    <div>
+      <section>
         <div className="container px-6 py-12 mx-auto">
           <div>
-            <p className="font-medium text-blue-500">Stay in touch</p>
+            <p className="font-medium text-blue-400">Stay in touch</p>
 
-            <h1 className="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl">
+            <h1 className="mt-2 text-2xl font-semibold text-white md:text-3xl">
               Let's discuss possibilities
             </h1>
 
-            <p className="mt-3 text-gray-500">
-              I’d love to hear from you. Please fill out this form or shoot me
+            <p className="mt-3 text-blue-200/80">
+              I'd love to hear from you. Please fill out this form or shoot me
               an email.
             </p>
           </div>
@@ -70,114 +70,114 @@ const Contact = () => {
           <div className="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-2">
             <div className="grid grid-cols-1 gap-5 lg:gap-0 md:grid-cols-2">
               <div>
-                <div className="bg-gray-100 p-5 w-[65px] rounded-full text-center ">
-                  <MdEmail className="text-gray-900 text-2xl"></MdEmail>
+                <div className="bg-blue-500/20 p-5 w-[65px] rounded-full text-center border border-blue-400/30">
+                  <MdEmail className="text-blue-300 text-2xl"></MdEmail>
                 </div>
-                <h2 className="mt-4 text-base font-medium text-gray-800">
+                <h2 className="mt-4 text-base font-medium text-white">
                   Email
                 </h2>
-                <a href="mailto:sayemtaher788@gmail.com" className="mt-2 text-sm text-blue-500">
+                <a href="mailto:sayemtaher788@gmail.com" className="mt-2 text-sm text-blue-400 hover:text-cyan-400">
                   sayemtaher788@gmail.com
                 </a>
               </div>
 
               <div>
-                <div className="bg-gray-100 p-5 w-[65px] rounded-full text-center ">
-                  <FaLinkedinIn className="text-gray-900 text-2xl"></FaLinkedinIn>
+                <div className="bg-blue-500/20 p-5 w-[65px] rounded-full text-center border border-blue-400/30">
+                  <FaLinkedinIn className="text-blue-300 text-2xl"></FaLinkedinIn>
                 </div>
-                <h2 className="mt-4 text-base font-medium text-gray-800">
+                <h2 className="mt-4 text-base font-medium text-white">
                   LinkedIn
                 </h2>
 
                 <Link to="https://www.linkedin.com/in/sayem-ibne-taher/">
-                  <p className="mt-2 text-sm text-blue-500 underline">
+                  <p className="mt-2 text-sm text-blue-400 hover:text-cyan-400 underline">
                     Click to connect
                   </p>
                 </Link>
               </div>
 
               <div>
-                <div className="bg-gray-100 p-5 w-[65px] rounded-full text-center ">
-                  <FaGithub className="text-gray-900 text-2xl"></FaGithub>
+                <div className="bg-blue-500/20 p-5 w-[65px] rounded-full text-center border border-blue-400/30">
+                  <FaGithub className="text-blue-300 text-2xl"></FaGithub>
                 </div>
-                <h2 className="mt-4 text-base font-medium text-gray-800">
+                <h2 className="mt-4 text-base font-medium text-white">
                   Github
                 </h2>
 
                 <Link to="https://github.com/SayemTaher">
-                  <p className="mt-2 text-sm text-blue-500 underline">
+                  <p className="mt-2 text-sm text-blue-400 hover:text-cyan-400 underline">
                     Click to view
                   </p>
                 </Link>
               </div>
             </div>
 
-            <div className="p-4 py-6 rounded-lg bg-gray-50 md:p-8">
+            <div className="p-4 py-6 rounded-lg bg-gradient-to-br from-slate-800/60 to-navy-800/60 backdrop-blur-sm md:p-8 border border-blue-500/20">
               <form onSubmit={sendEmail}>
                 <div className="-mx-2 md:items-center md:flex">
                   <div className="flex-1 px-2">
-                    <label className="block mb-2 text-sm text-gray-600">
+                    <label className="block mb-2 text-sm text-blue-200">
                       First Name
                     </label>
-                                      <input
-                                          required
+                    <input
+                      required
                       type="text"
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleChange}
                       placeholder="John"
-                      className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                      className="block w-full px-5 py-2.5 mt-2 text-white placeholder-blue-300/50 bg-slate-800/60 border border-blue-500/30 rounded-lg focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                     />
                   </div>
 
                   <div className="flex-1 px-2 mt-4 md:mt-0">
-                    <label className="block mb-2 text-sm text-gray-600">
+                    <label className="block mb-2 text-sm text-blue-200">
                       Last Name
                     </label>
-                                      <input
-                                          required
+                    <input
+                      required
                       type="text"
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleChange}
                       placeholder="Doe"
-                      className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                      className="block w-full px-5 py-2.5 mt-2 text-white placeholder-blue-300/50 bg-slate-800/60 border border-blue-500/30 rounded-lg focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                     />
                   </div>
                 </div>
 
                 <div className="mt-4">
-                  <label className="block mb-2 text-sm text-gray-600">
+                  <label className="block mb-2 text-sm text-blue-200">
                     Email address
                   </label>
-                                  <input
-                                      required
+                  <input
+                    required
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="johndoe@example.com"
-                    className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-5 py-2.5 mt-2 text-white placeholder-blue-300/50 bg-slate-800/60 border border-blue-500/30 rounded-lg focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                 </div>
 
                 <div className="w-full mt-4">
-                  <label className="block mb-2 text-sm text-gray-600">
+                  <label className="block mb-2 text-sm text-blue-200">
                     Message
                   </label>
-                                  <textarea
-                                      required
+                  <textarea
+                    required
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg md:h-56 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full h-32 px-5 py-2.5 mt-2 text-white placeholder-blue-300/50 bg-slate-800/60 border border-blue-500/30 rounded-lg md:h-56 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                     placeholder="Message"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50"
+                  className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg hover:from-blue-500 hover:to-cyan-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50 border border-blue-400/30"
                 >
                   Send message
                 </button>
@@ -185,8 +185,8 @@ const Contact = () => {
             </div>
           </div>
         </div>
-          </section>
-          <Toaster></Toaster>
+      </section>
+      <Toaster></Toaster>
     </div>
   );
 };
