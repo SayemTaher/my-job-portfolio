@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaGraduationCap, FaLaptopCode, FaLightbulb } from "react-icons/fa";
+import { IoLogoFigma } from "react-icons/io5";
 
 const About = () => {
   useEffect(() => {
@@ -31,9 +32,9 @@ const About = () => {
       description: "Continuous learning"
     },
     {
-      icon: <FaLightbulb className="text-rose-400 mx-auto" />,
-      title: "Innovator",
-      description: "Creative solutions"
+      icon: <IoLogoFigma className="text-rose-400 mx-auto" />,
+      title: "Designer",
+      description: "Digital solutions"
     }
   ];
 
@@ -46,7 +47,7 @@ const About = () => {
       <HeroSection
         title="About Me"
         subtitle="Get to Know Me Better"
-        description="A third-year student pursuing a Bachelor of Science in ICT at Fontys University of Applied Sciences. Primarily focused on Full Stack development, with a specialization in Mobile application development, particularly iOS platforms."
+        description="A final-year student pursuing a Bachelor of Science in ICT at Fontys University of Applied Sciences. Primarily focused on Full Stack development, with a specialization in Mobile application development, particularly iOS platforms."
         gradient="from-slate-900 via-navy-900 to-indigo-900"
         features={features}
       />
@@ -65,11 +66,11 @@ const About = () => {
               data-aos="fade-up"
             >
               <div className="flex flex-col md:flex-row gap-8 items-center">
-                <div className="flex-shrink-0" data-aos="fade-right">
+                <div className="flex-shrink-0 " data-aos="fade-right">
                   <img
                     src="/Sayem-linkedin.jpg"
                     alt="Sayem Ibne Taher"
-                    className="w-[340px] h-[340px] rounded-full  object-cover shadow-lg border-2 border-blue-500/30"
+                    className="w-[340px]   h-[340px] rounded-full  object-cover shadow-lg border-2 border-blue-500/30"
                   />
                 </div>
                 <div className="flex-1" data-aos="fade-left">
