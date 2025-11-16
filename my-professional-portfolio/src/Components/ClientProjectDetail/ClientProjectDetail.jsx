@@ -128,17 +128,17 @@ const ClientProjectDetail = () => {
       {/* Prototype Images Section */}
       {project.prototypeImages && project.prototypeImages.length > 0 && (
         <section className="container mx-auto px-4 py-12">
-          <div className="max-w-6xl mx-auto">
+          <div className=" mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center" data-aos="fade-up">
               Prototypes
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="">
               {project.prototypeImages.map((img, idx) => (
-                <div key={idx} data-aos="fade-up" data-aos-delay={idx * 100}>
+                <div className="flex justify-center items-center" key={idx} data-aos="fade-up" data-aos-delay={idx * 100}>
                   <img
                     src={img}
                     alt={`${project.title} prototype ${idx + 1}`}
-                    className="w-full h-auto rounded-xl shadow-lg border border-blue-500/20"
+                    className="max-w-full max-h-[700px]  p-2 rounded-xl flex  shadow-lg border border-blue-500/20"
                   />
                 </div>
               ))}
@@ -159,15 +159,15 @@ const ClientProjectDetail = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-8 text-center" data-aos="fade-up">
-                Design Artifacts
+                Project Artifacts
               </h2>
-              <div className="grid md:grid-cols-3 gap-6">
+              <div >
                 {project.artifactsImages.map((img, idx) => (
                   <div key={idx} data-aos="fade-up" data-aos-delay={idx * 100}>
                     <img
                       src={img}
                       alt={`${project.title} artifact ${idx + 1}`}
-                      className="w-full h-auto rounded-xl shadow-lg border border-blue-500/20"
+                      className="w-full max-h-[700px] rounded-xl shadow-lg border border-blue-500/20"
                     />
                   </div>
                 ))}
@@ -177,21 +177,20 @@ const ClientProjectDetail = () => {
         </section>
       )}
 
-      {/* Placeholder sections for future images */}
+      {/* Design Methods Section */}
       <section className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center" data-aos="fade-up">
-            Additional Materials
+            Design Methods Followed
           </h2>
           <div className="grid md:grid-cols-2 gap-6" data-aos="fade-up">
-            <GradientPlaceholder
-              name="Prototype Images - Coming Soon"
-              gradient={project.gradient}
-            />
-            <GradientPlaceholder
-              name="Design Artifacts - Coming Soon"
-              gradient={project.gradient}
-            />
+            {
+              project?.designMethods?.map((method, idx) => (
+                <div className="flex  justify-center items-center bg-gradient-to-br from-slate-800/60 to-navy-800/60 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-xl border border-blue-500/20" key={idx} data-aos="fade-up" data-aos-delay={idx * 100}>
+                  <p className="text-xl text-blue-200/80 leading-relaxed whitespace-pre-line">{method}</p>
+                </div>
+              ))
+            }
           </div>
         </div>
       </section>

@@ -15,8 +15,7 @@ import "./header.css";
 const Header = () => {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
-
-  // Close dropdown when clicking outside
+// Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -60,7 +59,7 @@ const Header = () => {
             </button>
 
             <ul
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-darknavy rounded-box w-60 border border-blue-500/20"
+              className="menu menu-sm dropdown-content flex flex-col gap-2 mt-3 z-[1] p-2 shadow-lg bg-darknavy rounded-box w-60 border border-blue-500/20"
               onMouseDown={() => setOpen(false)}
             >
               <li>
@@ -132,7 +131,7 @@ const Header = () => {
           </Link>
 
           <Link
-            to="https://drive.google.com/file/d/1TuLLhgjCjjtnomyeX0Jy0vzi8WJAkSHJ/view?usp=drive_link"
+            to="https://drive.google.com/file/d/1zEqNyWM2m5Tv2XnVhsgYm8xybwpc5ntM/view?usp=drive_link"
             className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 flex gap-1 lg:gap-2 lg:mr-0 justify-center items-center text-white p-2 rounded-full w-[90px] text-xs lg:w-[120px] text-center transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl border border-blue-400/30"
           >
             <MdOutlineFileDownload className="text-lg" />

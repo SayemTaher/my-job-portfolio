@@ -3,6 +3,7 @@ import FrontEndProject from "../FrontEnd-Project/FrontEndProject";
 import { Fade } from "react-awesome-reveal";
 
 const FrontEnd = () => {
+    
     const [webProject, setWebProject] = useState([])
     useEffect(() => {
         fetch('front-end.json')
@@ -10,7 +11,7 @@ const FrontEnd = () => {
             .then(data => setWebProject(data))
         console.log(webProject)
     }, [webProject])
-    
+
     return (
         <Fade triggerOnce cascade damping={0.5}>
             <div className="flex gap-8 flex-col pt-10 pb-20">
@@ -23,7 +24,6 @@ const FrontEnd = () => {
                     </p>
                     
                 </div>
-
                 <Fade triggerOnce damping={0.5}>
                     <div className="flex flex-col gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         {

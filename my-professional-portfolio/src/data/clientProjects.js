@@ -5,7 +5,7 @@ export const clientProjects = [
     title: "Quiet Eindhoven",
     description: "iOS donation management app enabling indirect charitable contributions. Complete UX/UI design and development.",
     fullDescription: "Quiet Eindhoven is an innovative iOS application designed to facilitate indirect charitable contributions through a seamless donation management system. This project involved comprehensive UX/UI design and full-stack development, focusing on creating an intuitive user experience that encourages charitable giving while maintaining transparency and trust.",
-    img: "/quiet-eindhoven.png",
+    img: "https://i.ibb.co/KxgP5PXy/quiet-eind.png",
     alt: "Quiet Eindhoven iOS donation app preview",
     chips: ["Swift", "SwiftUI", "Figma", "iOS Design", "Prototyping"],
     gradient: "from-orange-400 via-rose-400 to-red-500",
@@ -13,9 +13,10 @@ export const clientProjects = [
     year: "2024",
     role: "UX/UI Designer & Developer",
     // Placeholder for images that will be added later
-    prototypeImages: [],
-    artifactsImages: [],
-    supportingImages: [],
+    prototypeImages: ["https://i.ibb.co/SHV4ccy/Screenshot-2025-11-16-at-18-04-01.png"],
+    artifactsImages: ["https://i.ibb.co/NdDKq48f/Screenshot-2025-11-16-at-18-09-11.png"],
+    supportingImages: ["https://i.ibb.co/KxgP5PXy/quiet-eind.png"],
+    designMethods:["User Research", "User Testing", "Heuristic Evaluation", "A/B Testing", "Usability Testing"],
   },
   {
     id: "i3connect",
@@ -30,9 +31,10 @@ export const clientProjects = [
     year: "2024",
     role: "UX/UI Designer",
     // Placeholder for images that will be added later
-    prototypeImages: [],
-    artifactsImages: [],
+    prototypeImages: ["https://i.ibb.co/QjnRLTFw/Screenshot-2025-11-16-at-18-47-42.png"],
+    artifactsImages: ["https://i.ibb.co/kgDRFQhb/Screenshot-2025-11-16-at-18-56-33.png"],
     supportingImages: [],
+    designMethods:["AI Research","A/B Testing", "User Testing", "Heuristic Evaluation", "Usability Testing"],
   },
 ];
 
