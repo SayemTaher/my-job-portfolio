@@ -38,6 +38,7 @@ const Certificates = () => {
       id: 1,
       title: "Complete Web Development",
       provider: "Programming Hero",
+      participation : "Online",
       providerLogo: "https://i.ibb.co/VvGYkhk/ph.jpg",
       providerUrl: "https://www.programming-hero.com",
       image: "https://i.ibb.co/6ZWMrbx/Screenshot-2024-07-03-at-00-13-18.png",
@@ -47,6 +48,7 @@ const Certificates = () => {
       id: 2,
       title: "Responsive Web Design",
       provider: "FreeCodeCamp",
+      participation : "Online",
       providerLogo: "https://i.ibb.co/HVh0ByR/free-code-camp.png",
       providerUrl: "https://www.freecodecamp.org/learn",
       image: "https://i.ibb.co/JdvNq4D/Screenshot-2024-07-04-at-22-24-21.png",
@@ -56,10 +58,31 @@ const Certificates = () => {
       id: 3,
       title: "Sustainability and Green UX in Multimedia and IT",
       provider: "IBA, Kolding, Denmark",
+      participation : "In Person",
       providerLogo: "https://i.ibb.co/s1CMLrR/iba-kolding.png",
       providerUrl: "https://busitweeks.wordpress.com/international-business-academy-kolding/",
       image: "https://i.ibb.co/DrfcbMj/1711407683311.jpg",
       description: "I worked actively as part of a multicultural team, on projects requiring problem-solving skills with an academic but nevertheless practical mindset. Of crucial importance over the various weeks were time management, cross-cultural communication and team spirit."
+    },
+    {
+      id: 4,
+      title: "Digitization and Its Economic and Social Impacts",
+      provider: "Università della Calabria, Calabria, Italy",
+      participation : "In Person",
+      providerLogo: "https://i.ibb.co/995t7t1S/ucal.png",
+      providerUrl: "https://www.unical.it/internazionale/intenational-students/unical-admission/",
+      image: "https://i.ibb.co/Nw3cXJN/Screenshot-2025-11-11-at-14-33-01.png",
+      description: "The project involves developing a business model and business plan for a startup in the sustainable and digital tourism sector, with a focus on economic and social impact, as well as business and marketing communication."
+    },
+    {
+      id: 5,
+      title: "Intensive Blended Design Workshop",
+      provider: "EK - Erhvervsakademi København",
+      participation : "In Person",
+      providerLogo: "https://i.ibb.co/fdcwSnfw/kea.jpg",
+      providerUrl: "https://mit.kea.dk/en/exchange-students/activities/charrette",
+      image: "https://i.ibb.co/rGxCMxtK/kea.jpg",
+      description: "Engaged in a week-long international design challenge as part of the KEA Charrette in Copenhagen, collaborating with students from various countries to explore sustainability-focused solutions. Worked with local stakeholders to develop innovative prototypes aimed at enhancing the sustainability of businesses. This project provided a hands-on experience in cross-cultural teamwork, creative problem-solving, and sustainable design practices, allowing me to contribute to real-world impact while expanding my global perspective."
     }
   ];
 
@@ -132,9 +155,10 @@ const Certificates = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
+                <div className="p-6 flex flex-col gap-2 justify-between">
                   <h3 className="text-xl font-bold text-white mb-3">{cert.title}</h3>
-                  <p className="text-blue-200/80 text-sm leading-relaxed line-clamp-4">
+                  <span className=" text-orange-500 text-sm leading-relaxed line-clamp-4">{cert.participation}</span>
+                  <p className="text-blue-200/80 text-sm leading-relaxed line-clamp-4    ">
                     {cert.description}
                   </p>
                 </div>

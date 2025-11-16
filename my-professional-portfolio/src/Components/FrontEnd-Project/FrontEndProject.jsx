@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { FaCode, FaGlobeAfrica } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const FrontEndProject = ({ project }) => {
   const {
@@ -50,24 +51,21 @@ const FrontEndProject = ({ project }) => {
           <p className="text-blue-200/80 max-w-[450px]">{description}</p>
 
           <div className="flex gap-4 items-center">
-            <a
-              href={website_link}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link to={website_link}
+              
               className="flex bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-full text-white hover:scale-105 items-center gap-2 transition-transform duration-300 shadow-lg hover:shadow-xl border border-blue-400/30"
             >
               <FaGlobeAfrica></FaGlobeAfrica>
-              <button>Visit Now</button>
-            </a>
-            <a
-              href={gitHub}
-              target="_blank"
-              rel="noopener noreferrer"
+              <span>Visit Now</span>
+            </Link>
+            <Link to={gitHub}
+              
+              
               className="flex gap-2 bg-gradient-to-r from-slate-700 to-slate-800 text-white p-3 rounded-full hover:scale-105 items-center transition-transform duration-300 shadow-lg hover:shadow-xl border border-slate-600/30"
             >
               <FaCode />
               <span>View Code</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
