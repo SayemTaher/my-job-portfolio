@@ -6,11 +6,19 @@ import { SiTailwindcss } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { FaFigma } from "react-icons/fa";
 import AOS from "aos";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "aos/dist/aos.css";
 import { FaStar } from "react-icons/fa6";
 // BlogCard.jsx
 export const Bosch = () => {
+    const [isExpanded, setIsExpanded] = useState(false);
+    const description = "During my internship at Bosch Security Systems in Eindhoven, I worked as a Web Application Design & Developer Intern, focusing on creating a secure, full-stack web solution for internal use. The project, a major upgrade to the department's Knowledge Kiosk system, allowed me to apply both my technical and UX design skills in a professional, high-security environment. I implemented the MERN stack (MongoDB, Express.js, React.js, Node.js) to build a responsive, touch-optimized interface, designed for interactive kiosk displays. I developed a multi-user authentication system using JWT and integrated RFID card-reader support to enable secure, role-based access for different user types.";
+    const maxLength = 150;
+    const shouldTruncate = description.length > maxLength;
+    const displayDescription = isExpanded || !shouldTruncate 
+      ? description 
+      : `${description.substring(0, maxLength)}...`;
+
     useEffect(() => {
       AOS.init({
         duration: 1000,
@@ -60,9 +68,19 @@ export const Bosch = () => {
                     Web Design & Development Internship
                   </h3>
 
-                  <p className="text-blue-200/80 text-lg mb-6 leading-relaxed">
-                    During my internship at Bosch Security Systems in Eindhoven, I worked as a Web Application Design & Developer Intern, focusing on creating a secure, full-stack web solution for internal use. The project, a major upgrade to the department's Knowledge Kiosk system, allowed me to apply both my technical and UX design skills in a professional, high-security environment. I implemented the MERN stack (MongoDB, Express.js, React.js, Node.js) to build a responsive, touch-optimized interface, designed for interactive kiosk displays. I developed a multi-user authentication system using JWT and integrated RFID card-reader support to enable secure, role-based access for different user types.
-                  </p>
+                  <div className="mb-6">
+                    <p className="text-blue-200/80 text-lg mb-2 leading-relaxed">
+                      {displayDescription}
+                    </p>
+                    {shouldTruncate && (
+                      <button
+                        onClick={() => setIsExpanded(!isExpanded)}
+                        className="text-blue-400 hover:text-cyan-400 text-sm font-medium transition-colors"
+                      >
+                        {isExpanded ? "Read less" : "Read more"}
+                      </button>
+                    )}
+                  </div>
 
                   <div className="flex gap-2 flex-wrap text-sm font-semibold mb-6">
                     {["Internship", "Agile Development", "Web development", "Web Design", "User Centered Design", "UX/UI Design", "Prototyping", "A/B Testing"].map((tag) => (

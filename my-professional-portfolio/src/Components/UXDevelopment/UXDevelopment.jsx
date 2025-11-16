@@ -1,9 +1,92 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import { FaSearch, FaLightbulb, FaPalette, FaRocket, FaUsers, FaChartLine } from "react-icons/fa";
 import { clientProjects } from "../../data/clientProjects";
+import ImageWithLoader from "../ImageWithLoader/ImageWithLoader";
+
+const ProjectCard = ({ project, index }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const maxLength = 100;
+  const shouldTruncate = project.description && project.description.length > maxLength;
+  const displayDescription = isExpanded || !shouldTruncate 
+    ? project.description 
+    : `${project.description.substring(0, maxLength)}...`;
+
+  return (
+    <Link
+      key={project.id}
+      to={`/client-project/${project.id}`}
+      className="group"
+      data-aos="fade-up"
+      data-aos-delay={index * 100}
+    >
+      <div className="bg-gradient-to-br from-slate-800/60  to-navy-800/60 backdrop-blur-sm rounded-2xl overflow-hidden border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
+        {/* Image */}
+        <div className="relative h-[400px] object-cover overflow-hidden">
+          {project.img ? (
+            <ImageWithLoader
+              src={project.img}
+              alt={project.alt}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out will-change-transform"
+              skeletonClassName="h-[400px] w-full"
+            />
+          ) : (
+            <div className={`h-full w-full bg-gradient-to-br ${project.gradient} flex items-center justify-center`}>
+              <span className="text-white text-2xl font-bold text-center px-4">{project.title}</span>
+            </div>
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+        </div>
+
+        {/* Content */}
+        <div className="p-6">
+          <h4 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+            {project.title}
+          </h4>
+          <div className="mb-4">
+            <p className="text-blue-200/80 mb-2">
+              {displayDescription}
+            </p>
+            {shouldTruncate && (
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setIsExpanded(!isExpanded);
+                }}
+                className="text-blue-400 hover:text-cyan-400 text-sm font-medium transition-colors"
+              >
+                {isExpanded ? "Read less" : "Read more"}
+              </button>
+            )}
+          </div>
+
+          {/* Tags */}
+          <div className="flex flex-wrap gap-2 mb-4">
+            {project.chips.map((chip, chipIndex) => (
+              <span
+                key={chipIndex}
+                className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold border border-blue-400/30"
+              >
+                {chip}
+              </span>
+            ))}
+          </div>
+
+          {/* View Project Link */}
+          <div className="flex items-center text-blue-400 mt-6 group-hover:text-cyan-400 transition-colors font-semibold">
+            <span>View Project</span>
+            <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300 ease-out" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
+};
 
 const UXDevelopment = () => {
   useEffect(() => {
@@ -81,7 +164,7 @@ const UXDevelopment = () => {
           {processes.map((process, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-slate-800/50 to-navy-800/50 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
+              className="bg-gradient-to-br from-slate-800/50 to-navy-800/50 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 ease-out hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -107,63 +190,9 @@ const UXDevelopment = () => {
           </p>
         </div>
 
-        <div >
+        <div className="flex flex-col gap-8">
           {clientProjects.map((project, index) => (
-            <Link
-              key={project.id}
-              to={`/client-project/${project.id}`}
-              className="group"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-            >
-              <div className="bg-gradient-to-br from-slate-800/60  to-navy-800/60 backdrop-blur-sm rounded-2xl overflow-hidden border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
-                {/* Image */}
-                <div className="relative h-[400px] object-cover overflow-hidden">
-                  {project.img ? (
-                    <img
-                      src={project.img}
-                      alt={project.alt}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  ) : (
-                    <div className={`h-full w-full bg-gradient-to-br ${project.gradient} flex items-center justify-center`}>
-                      <span className="text-white text-2xl font-bold text-center px-4">{project.title}</span>
-                    </div>
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  <h4 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
-                    {project.title}
-                  </h4>
-                  <p className="text-blue-200/80 mb-4 line-clamp-2">
-                    {project.description}
-                  </p>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.chips.map((chip, chipIndex) => (
-                      <span
-                        key={chipIndex}
-                        className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold border border-blue-400/30"
-                      >
-                        {chip}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* View Project Link */}
-                  <div className="flex items-center text-blue-400 mt-6 group-hover:text-cyan-400 transition-colors font-semibold">
-                    <span>View Project</span>
-                    <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </Link>
+            <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
       </div>

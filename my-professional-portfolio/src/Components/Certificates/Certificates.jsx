@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaAward, FaGraduationCap, FaGlobe } from "react-icons/fa";
+import ImageWithLoader from "../ImageWithLoader/ImageWithLoader";
 
 const Certificates = () => {
   useEffect(() => {
@@ -121,23 +122,25 @@ const Certificates = () => {
             {certificates.map((cert, index) => (
               <div
                 key={cert.id}
-                className="bg-gradient-to-br from-slate-800/60 to-navy-800/60 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-blue-500/20 hover:border-blue-400/40"
+                className="bg-gradient-to-br from-slate-800/60 to-navy-800/60 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ease-out hover:-translate-y-2 border border-blue-500/20 hover:border-blue-400/40"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
                 {/* Image */}
                 <div className="relative h-64 overflow-hidden">
-                  <img
+                  <ImageWithLoader
                     src={cert.image}
                     alt={cert.title}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500 ease-out will-change-transform"
+                    skeletonClassName="h-64 w-full"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/80 to-transparent p-4">
                     <div className="flex items-center gap-3">
-                      <img
+                      <ImageWithLoader
                         src={cert.providerLogo}
                         alt={cert.provider}
                         className="w-10 h-10 rounded-full object-cover border-2 border-white/20"
+                        skeletonClassName="w-10 h-10 rounded-full"
                       />
                       <div>
                         <h3 className="text-white font-semibold text-sm">{cert.provider}</h3>

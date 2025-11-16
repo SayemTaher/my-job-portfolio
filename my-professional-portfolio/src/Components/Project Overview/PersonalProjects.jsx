@@ -1,5 +1,8 @@
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import { MdOutlineArrowCircleRight } from "react-icons/md";
+import ImageWithLoader from "../ImageWithLoader/ImageWithLoader";
 
 const ProjectCard = ({ title, description, year, img, liveUrl, repoUrl, tags = [] }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -10,14 +13,15 @@ const ProjectCard = ({ title, description, year, img, liveUrl, repoUrl, tags = [
     : `${description.substring(0, maxLength)}...`;
 
   return (
-    <div className="group rounded-3xl overflow-hidden bg-gradient-to-br from-slate-800/60 to-navy-800/60 backdrop-blur-sm border border-blue-500/20 hover:border-blue-400/40 shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.02] hover:shadow-blue-500/20 flex flex-col h-full">
+    <div className="group rounded-3xl overflow-hidden bg-gradient-to-br from-slate-800/60 to-navy-800/60 backdrop-blur-sm border border-blue-500/20 hover:border-blue-400/40 shadow-lg transition-all duration-500 ease-out hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.02] hover:shadow-blue-500/20 flex flex-col h-full">
       {/* Top image preview */}
       <div className="relative h-40 sm:h-48 overflow-hidden flex-shrink-0">
         {img ? (
-          <img
+          <ImageWithLoader
             src={img}
             alt={`${title} preview`}
-            className="object-cover w-full h-full transition duration-700 group-hover:scale-110"
+            className="w-full h-full object-contain sm:object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-110"
+            skeletonClassName="h-40 sm:h-48"
           />
         ) : (
           <div className="h-full w-full bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center">
@@ -64,7 +68,7 @@ const ProjectCard = ({ title, description, year, img, liveUrl, repoUrl, tags = [
               onClick={() => setIsExpanded(!isExpanded)}
               className="text-blue-400 hover:text-cyan-400 text-sm font-medium mb-3 self-start transition-colors"
             >
-              {isExpanded ? "See less" : "See more"}
+              {isExpanded ? "Read less" : "Read more"}
             </button>
           )}
 
@@ -97,7 +101,7 @@ const ProjectCard = ({ title, description, year, img, liveUrl, repoUrl, tags = [
                     e.stopPropagation();
                   }
                 }}
-                className="text-xs font-medium px-4 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg border border-blue-400/30"
+                className="text-xs font-medium px-4 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white transition-all duration-300 ease-out hover:scale-105 will-change-transform shadow-md hover:shadow-lg border border-blue-400/30"
               >
                 View Code
               </a>
@@ -164,11 +168,24 @@ const PersonalProjects = () => {
               <div className="text-blue-300">Loading projects...</div>
             </div>
           ) : (
-            <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch">
-              {mappedProjects.map((p) => (
-                <ProjectCard key={p.id} {...p} />
-              ))}
-            </div>
+            <>
+              <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+                {mappedProjects.map((p) => (
+                  <ProjectCard key={p.id} {...p} />
+                ))}
+              </div>
+              
+              {/* View All Button */}
+              <div className="flex justify-center mt-12" data-aos="fade-up">
+                <NavLink
+                  to="/projects"
+                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 font-semibold shadow-xl hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 ease-out hover:scale-105 will-change-transform border border-blue-400/30"
+                >
+                  <MdOutlineArrowCircleRight className="text-xl" />
+                  <span>View All Personal Projects</span>
+                </NavLink>
+              </div>
+            </>
           )}
         </div>
       </section>

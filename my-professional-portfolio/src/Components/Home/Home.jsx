@@ -82,7 +82,7 @@ const Home = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`bg-gradient-to-br ${service.gradient} rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/20 border border-white/10`}
+                className={`bg-gradient-to-br ${service.gradient} rounded-2xl p-8 hover:scale-105 transition-all duration-300 ease-out shadow-2xl hover:shadow-blue-500/20 border border-white/10`}
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >

@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Loader from "../Loader/Loader";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
 import 'animate.css';
 import { useEffect, useState } from "react";
 import AOS from 'aos';
@@ -50,6 +51,7 @@ const Root = () => {
       </div>
     ) : (
       <div className="overflow-hidden flex flex-col scroll-smooth">
+        <ScrollToTop />
         <Header></Header>
         <div className="pt-20 z-10 font-mulish">
           <Outlet></Outlet>

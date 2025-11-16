@@ -132,7 +132,7 @@ const Header = () => {
 
           <Link
             to="https://drive.google.com/file/d/1zEqNyWM2m5Tv2XnVhsgYm8xybwpc5ntM/view?usp=drive_link"
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 flex gap-1 lg:gap-2 lg:mr-0 justify-center items-center text-white p-2 rounded-full w-[90px] text-xs lg:w-[120px] text-center transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl border border-blue-400/30"
+            className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 flex gap-1 lg:gap-2 lg:mr-0 justify-center items-center text-white p-2 rounded-full w-[90px] text-xs lg:w-[120px] text-center transition-all duration-300 ease-out hover:scale-105 will-change-transform shadow-lg hover:shadow-xl border border-blue-400/30"
           >
             <MdOutlineFileDownload className="text-lg" />
             <button>Resume</button>

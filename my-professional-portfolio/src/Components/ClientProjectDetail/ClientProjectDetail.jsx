@@ -5,6 +5,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ImageWithLoader from "../ImageWithLoader/ImageWithLoader";
 
 const GradientPlaceholder = ({ name, gradient, size = "h-64" }) => {
   return (
@@ -82,10 +83,11 @@ const ClientProjectDetail = () => {
         <div className="max-w-6xl mx-auto" data-aos="fade-up">
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-blue-500/20">
             {project.img ? (
-              <img
+              <ImageWithLoader
                 src={project.img}
                 alt={project.alt}
                 className="w-full h-auto object-cover"
+                skeletonClassName="w-full h-96"
               />
             ) : (
               <GradientPlaceholder
@@ -135,10 +137,11 @@ const ClientProjectDetail = () => {
             <div className="">
               {project.prototypeImages.map((img, idx) => (
                 <div className="flex justify-center items-center" key={idx} data-aos="fade-up" data-aos-delay={idx * 100}>
-                  <img
+                  <ImageWithLoader
                     src={img}
                     alt={`${project.title} prototype ${idx + 1}`}
-                    className="max-w-full max-h-[700px]  p-2 rounded-xl flex  shadow-lg border border-blue-500/20"
+                    className="max-w-full max-h-[700px] p-2 rounded-xl flex shadow-lg border border-blue-500/20"
+                    skeletonClassName="max-w-full max-h-[700px] p-2 rounded-xl"
                   />
                 </div>
               ))}
@@ -164,10 +167,11 @@ const ClientProjectDetail = () => {
               <div >
                 {project.artifactsImages.map((img, idx) => (
                   <div key={idx} data-aos="fade-up" data-aos-delay={idx * 100}>
-                    <img
+                    <ImageWithLoader
                       src={img}
                       alt={`${project.title} artifact ${idx + 1}`}
                       className="w-full max-h-[700px] rounded-xl shadow-lg border border-blue-500/20"
+                      skeletonClassName="w-full max-h-[700px] rounded-xl"
                     />
                   </div>
                 ))}
@@ -200,7 +204,7 @@ const ClientProjectDetail = () => {
         <div className="max-w-4xl mx-auto flex justify-center">
           <Link
             to="/mobileProjects"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold hover:scale-105 transition-transform shadow-lg hover:shadow-xl border border-blue-400/30"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold hover:scale-105 transition-transform duration-300 ease-out will-change-transform shadow-lg hover:shadow-xl border border-blue-400/30"
           >
             <FaArrowLeft />
             <span>Back to All Projects</span>

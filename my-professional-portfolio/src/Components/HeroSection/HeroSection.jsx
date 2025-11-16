@@ -69,12 +69,12 @@ const HeroSection = ({
               {ctaLink ? (
                 <a
                   href={ctaLink}
-                  className="inline-block bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform duration-300 shadow-2xl"
+                  className="inline-block bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform duration-300 ease-out will-change-transform shadow-2xl"
                 >
                   {ctaText}
                 </a>
               ) : (
-                <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform duration-300 shadow-2xl">
+                <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform duration-300 ease-out will-change-transform shadow-2xl">
                   {ctaText}
                 </button>
               )}
