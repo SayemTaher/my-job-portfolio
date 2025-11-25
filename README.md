@@ -65,3 +65,5 @@ Clone the repository and install dependencies
 git clone https://github.com/SayemTaher/my-job-portfolio.git
 cd my-job-portfolio
 npm install
+npm run dev
+
