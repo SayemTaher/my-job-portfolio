@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import { Helmet } from "react-helmet-async";
 import Hero from "../Hero/Hero";
-import UXDevelopment from "../UXDevelopment/UXDevelopment";
 import { ClientProject } from "../Project Overview/ClientProject";
 import PersonalProjects from "../Project Overview/PersonalProjects";
 import AOS from "aos";
@@ -70,10 +69,10 @@ const Home = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16" data-aos="fade-up">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-              What I Do
+              What I Deliver
             </h2>
             <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-              Comprehensive digital solutions from concept to deployment
+              Comprehensive digital solutions from concept to deployment  ensuring seamless user experience across platforms
             </p>
             <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mt-6 rounded-full"></div>
           </div>

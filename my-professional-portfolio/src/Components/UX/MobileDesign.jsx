@@ -3,7 +3,7 @@ import HeroSection from "../HeroSection/HeroSection";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaMobileAlt, FaPalette, FaUserCheck, FaRocket } from "react-icons/fa";
+import { FaPalette, FaUserCheck, FaRocket } from "react-icons/fa";
 import { clientProjects } from "../../data/clientProjects";
 import { Link } from "react-router-dom";
 import ImageWithLoader from "../ImageWithLoader/ImageWithLoader";

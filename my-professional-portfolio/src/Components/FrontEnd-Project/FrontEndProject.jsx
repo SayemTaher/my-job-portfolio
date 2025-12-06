@@ -19,10 +19,11 @@ const FrontEndProject = ({ project }) => {
 
   const maxLength = 120;
   const shouldTruncate = description && description.length > maxLength;
-  const displayDescription = isExpanded || !shouldTruncate 
-    ? description 
-    : `${description.substring(0, maxLength)}...`;
-  
+  const displayDescription =
+    isExpanded || !shouldTruncate
+      ? description
+      : `${description.substring(0, maxLength)}...`;
+
   return (
     <div className="w-full max-w-full mx-auto lg:max-w-[1170px] bg-gradient-to-br from-slate-800/60 to-navy-800/60 backdrop-blur-sm shadow-lg hover:shadow-2xl rounded-2xl transition-all duration-300 ease-out hover:-translate-y-2 border border-blue-500/20 hover:border-blue-400/40 overflow-hidden">
       <div
@@ -81,14 +82,14 @@ const FrontEndProject = ({ project }) => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center w-full lg:w-auto">
-            <Link 
+            <Link
               to={website_link}
               className="flex bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-full text-white hover:scale-105 items-center gap-2 transition-transform duration-300 ease-out will-change-transform shadow-lg hover:shadow-xl border border-blue-400/30 w-full sm:w-auto justify-center"
             >
               <FaGlobeAfrica></FaGlobeAfrica>
               <span>Visit Now</span>
             </Link>
-            <Link 
+            <Link
               to={gitHub}
               className="flex gap-2 bg-gradient-to-r from-slate-700 to-slate-800 text-white p-3 rounded-full hover:scale-105 items-center transition-transform duration-300 ease-out will-change-transform shadow-lg hover:shadow-xl border border-slate-600/30 w-full sm:w-auto justify-center"
             >

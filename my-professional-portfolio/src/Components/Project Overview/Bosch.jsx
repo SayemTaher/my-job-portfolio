@@ -1,4 +1,3 @@
-import { ProjectHeadline } from "../Home/ProjectHeadline";
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";

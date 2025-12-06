@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet-async";
 import { FaCode } from "react-icons/fa";
 import Education from "../Education/Education";
@@ -7,7 +6,7 @@ import HeroSection from "../HeroSection/HeroSection";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaGraduationCap, FaLaptopCode, FaLightbulb } from "react-icons/fa";
+import { FaGraduationCap, FaLaptopCode } from "react-icons/fa";
 import { IoLogoFigma } from "react-icons/io5";
 
 const About = () => {

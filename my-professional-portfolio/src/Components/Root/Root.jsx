@@ -53,7 +53,7 @@ const Root = () => {
       <div className="overflow-hidden flex flex-col scroll-smooth">
         <ScrollToTop />
         <Header></Header>
-        <div className="pt-20 z-10 font-mulish">
+        <div className=" z-10 font-mulish">
           <Outlet></Outlet>
         </div>
         <Footer></Footer>

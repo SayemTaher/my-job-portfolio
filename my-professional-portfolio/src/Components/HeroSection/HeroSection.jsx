@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import PropTypes from "prop-types";
 
 const HeroSection = ({ 
   title, 
@@ -91,6 +92,16 @@ const HeroSection = ({
       </div>
     </section>
   );
+};
+
+HeroSection.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
+  description: PropTypes.string,
+  gradient: PropTypes.string,
+  features: PropTypes.array,
+  ctaText: PropTypes.string,
+  ctaLink: PropTypes.string,
 };
 
 export default HeroSection;

@@ -17,24 +17,6 @@ const Hero = () => {
     });
   }, []);
 
-  const features = [
-    {
-      icon: <FaCode className="text-4xl" />,
-      title: "Fast",
-      description: "High-performance development"
-    },
-    {
-      icon: <MdDesignServices className="text-4xl" />,
-      title: "Reliable",
-      description: "Consistent quality delivery"
-    },
-    {
-      icon: <FaDatabase className="text-4xl" />,
-      title: "Safe",
-      description: "Secure and scalable solutions"
-    }
-  ];
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-navy-900 to-indigo-900 min-h-screen flex items-center justify-center">
       {/* Animated background elements */}
@@ -69,7 +51,7 @@ const Hero = () => {
               </span>
           
           <p className="text-xl sm:text-2xl md:text-3xl text-blue-200 mb-6 max-w-6xl text-center leading-relaxed">
-            Blending creativity and technology to translate ideas into meaningful digital solutions that connect users with innovation
+            Utilizing  technology to translate ideas into meaningful digital solutions that elevate user experience across platforms
           </p>
           </div>
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -58,11 +58,11 @@ const Contact = () => {
             <p className="font-medium text-blue-400">Stay in touch</p>
 
             <h1 className="mt-2 text-2xl font-semibold text-white md:text-3xl">
-              Let's discuss possibilities
+              Let&apos;s discuss possibilities
             </h1>
 
             <p className="mt-3 text-blue-200/80">
-              I'd love to hear from you. Please fill out this form or shoot me
+              I&apos;d love to hear from you. Please fill out this form or shoot me
               an email.
             </p>
           </div>

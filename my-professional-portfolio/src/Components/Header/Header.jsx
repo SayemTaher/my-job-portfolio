@@ -36,8 +36,8 @@ const Header = () => {
     "flex gap-2 text-lg items-center text-blue-300 p-2 hover:bg-blue-500/20 hover:border hover:border-blue-400/30 hover:rounded-xl transition-all duration-300";
 
   return (
-    <div className="bg-gradient-to-r from-slate-900/95 via-navy-900/95 to-indigo-900/95 backdrop-blur-3xl shadow-sm w-full mx-auto p-2 fixed top-0 left-0 right-0 z-50 font-mulish transition-all duration-300 border-b border-blue-500/20">
-      <div className="navbar container mx-auto flex items-center justify-center">
+    <div className="bg-gradient-to-r  shadow-sm w-full mx-auto p-2 fixed top-0 left-0 right-0 z-50 font-mulish transition-all duration-300 ">
+      <div className="navbar container mt-5 bg-gradient-to-r border-2 border-blue-950   from-slate-900/95 via-navy-900/95 to-indigo-900/95 backdrop-blur-3xl bg-slate rounded-full mx-auto flex items-center justify-center">
         <div className="navbar-start">
           <div ref={dropdownRef} className={`dropdown ${open ? "dropdown-open" : ""}`}>
             <button
